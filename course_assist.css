@@ -1,0 +1,17 @@
+.titles{
+	background-color:#E0E0E0;
+	padding-bottom:3%;
+	padding-top:3%;
+}
+
+.container{
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center;
+}
+
+.card{
+	max-width: 40rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
