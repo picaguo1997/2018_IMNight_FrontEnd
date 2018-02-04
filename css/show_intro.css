@@ -10,5 +10,13 @@
 	background-position:center;
 	/* background-attachment: fixed; */
 	background-size: contain;
-	
+}
+
+
+.subtitle, .detail{
+	color:rgba(0,0,0,0.5);
+}
+
+.title,.modal-title{
+	color:rgba(0,0,0,0.7);
 }

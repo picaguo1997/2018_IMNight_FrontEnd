@@ -1,4 +1,4 @@
-var shows = new Vue({
+let shows = new Vue({
 	el: "#show-list",
 	data: {
 		shows: [

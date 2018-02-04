@@ -21,7 +21,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>表演介紹</h2>
+				<h2 class="title">表演介紹</h2>
+				<h6 class="subtitle">所有表演的簡介</h6>
 			</div>		
 		</div>
 		<div class="row" id="show-list">
@@ -49,14 +50,14 @@
 				      	  			<img src="{{show.img}}" style="width:100%" class="rounded">
 				      	  		</div>
 				      	  		<div class="col" >
-				      	  			<h5>Intro:</h5>
-				      	  			<h6><span style="display:inline-block; width:20px;"></span>{{ show.intro }}</h6>
+				      	  			<h5 class="title">Intro:</h5>
+				      	  			<h6 class="detail"><span style="display:inline-block; width:20px;"></span>{{ show.intro }}</h6>
 				      	  			
 				      	  		</div>
 								<div class="col">
-									<h5>表演人員</h5>	
+									<h5 class="title">表演人員</h5>	
 									<ul >
-										<li v-for="mb in show.mbs">{{mb}}</li>
+										<li class="detail" v-for="mb in show.mbs">{{mb}}</li>
 									</ul>
 								</div>
 				      	  		
