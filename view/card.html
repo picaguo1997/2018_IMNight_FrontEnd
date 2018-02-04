@@ -13,41 +13,40 @@
 	
 	<script src="../js/vue.min.js"></script>
 
-	<link rel="stylesheet" href="../css/coupon.css">
+	<link rel="stylesheet" href="../css/card.css">
 
-	<title>Coupon</title>
+	<title>Card</title>
 </head>
 <body>
 	<div class="container">
 		<!-- put content here -->
+		<template id="card">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="title">折價卷</h2>
+					<h2 class="title">{{title}} {{name}}</h2>
 				</div>
 			</div>
 			<div class="row text-center" id="coupon">
 				<div class="col-lg-4" id="store-des">
-					<h4 class="title">商店名稱：</h4>
-					<h6 class="subtitle">{{ name }}</h6>
+					<h4 class="title">負責內容：</h4>
+					<h6 class="subtitle">{{ work }}</h6>
 					<br>
-					<h4 class="title">優惠卷內容：</h4>
-					<h6 class="subtitle">{{ content }}</h6>
-					<br>
-					<h4 class="title">使用期限：</h4>
-					<h6 class="subtitle">即日起至{{ deadline }}</h6>
+					<h4 class="title">介紹：</h4>
+					<h6 class="subtitle">{{ intro}}</h6>
 					<br>
 					<div class="btn-group-vertical">
-						<button type="button" class="btn btn-dark">前往商家</button>
-						<button type="button" class="btn btn-dark">查看可使用折價卷</button>
+						<button type="button" class="btn btn-dark">我想和它聊天</button>
+						<button type="button" class="btn btn-dark">查看所有資管人</button>
 					</div>
 				</div>
 
 				<div class="col-lg-6">
-					<img src="{{img}}" class="rounded">
+					<img class="photo" src="{{img}}" class="rounded">
 				</div>
 			</div>
+		</template>
 	</div>
 	
-	<script src="../js/coupon.js"></script>
+	<script src="../js/card.js"></script>
 </body>
 </html>
