@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>課程與學習資源</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- custom CSS-->
+	    <link href="../css/course_assist.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id = "mainContext">
+			<div class = "titles">
+				<div class="container">
+					<h1><b>課程與學習資源</b></h1>
+				</div>
+			</div>
+			
+			<div class = "course">
+				<div class = "row">
+					<div class = "col-sm-4">
+						<div class = "card m-2 box-shadow" data-toggle="modal" data-target="#exampleModal">
+							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">程式設計</h4>
+								<h6 class="card-subtitle mb-2 text-success">孔令傑 教授</h6>
+								<p class = "card-context">card-img-top</p>
+								<footer class="blockquote-footer">大一必修</footer>
+							</div>
+						</div>
+					</div>
+					
+					<div class = "col-sm-4">
+						<div class = "card m-2 box-shadow" data-toggle="modal" data-target="#exampleModal">
+							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">Card title</h4>
+								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+								<p class = "card-context">card-body with card-context <br>
+								card-img-top</p>
+								<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+							</div>
+						</div>
+					</div>
+					
+					<div class = "col-sm-4">
+						<div class = "card m-2 box-shadow" data-toggle="modal" data-target="#exampleModal">
+							<img class = "card-img-top" src = "http://paolaelefante.com/wp-content/uploads/2015/10/coding-750x410.jpg" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">Card title</h4>
+								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+								<p class = "card-context">card-body with card-context <br>
+								card-img-top</p>
+								<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+							</div>
+						</div>
+					</div>
+					
+					<div class = "col-sm-4">
+						<div class = "card m-2 box-shadow" data-toggle="modal" data-target="#exampleModal">
+							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">Card title</h4>
+								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+								<p class = "card-context">card-body with card-context <br>
+								card-img-top</p>
+								<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+							</div>
+						</div>
+					</div>
+					
+					<div class="modal fade" id = "exampleModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">{{courseName}}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<center>
+										<p class = "textInBox text-muted" style = "font-style: oblique;">{{slogan}}</p>
+									<iframe height = "200vh" src="https://www.youtube.com/embed/lBzCooNboTI"></iframe></center>
+									<p v-html = "Info"></p>								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- link for jquery and bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- custom js -->
+		<script src = "../js/course_js.js"></script>
+		
+	</body>
+</html>
