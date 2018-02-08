@@ -1,0 +1,22 @@
+.modal-content:before{
+	content:"";
+    position: absolute;
+    width: 100%;
+    height:100%;
+  	opacity:0.1;
+	top:0px;
+	background-image:url(../img/KV_OB.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	/* background-attachment: fixed; */
+	background-size: contain;
+}
+
+
+.subtitle, .detail{
+	color:rgba(0,0,0,0.5);
+}
+
+.title,.modal-title{
+	color:rgba(0,0,0,0.7);
+}

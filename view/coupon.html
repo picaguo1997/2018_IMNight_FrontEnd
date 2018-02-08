@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+	
+	<script src="../js/vue.min.js"></script>
+
+	<link rel="stylesheet" href="../css/coupon.css">
+
+	<title>Coupon</title>
+</head>
+<body>
+	<div class="container">
+		<!-- put content here -->
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="title">折價卷</h2>
+				</div>
+			</div>
+			<div class="row text-center" id="coupon">
+				<div class="col-lg-4" id="store-des">
+					<h4 class="title">商店名稱：</h4>
+					<h6 class="subtitle">{{ name }}</h6>
+					<br>
+					<h4 class="title">優惠卷內容：</h4>
+					<h6 class="subtitle">{{ content }}</h6>
+					<br>
+					<h4 class="title">使用期限：</h4>
+					<h6 class="subtitle">即日起至{{ deadline }}</h6>
+					<br>
+					<div class="btn-group-vertical">
+						<button type="button" class="btn btn-dark">前往商家</button>
+						<button type="button" class="btn btn-dark">查看可使用折價卷</button>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<img src="{{img}}" class="rounded">
+				</div>
+			</div>
+	</div>
+	
+	<script src="../js/coupon.js"></script>
+</body>
+</html>

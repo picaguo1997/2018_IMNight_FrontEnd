@@ -1,0 +1,12 @@
+.subtitle, .detail{
+	color:rgba(0,0,0,0.5);
+}
+
+.title,.modal-title{
+	color:rgba(0,0,0,0.7);
+}
+
+#store-des{
+	margin-bottom: 40px;
+
+}
