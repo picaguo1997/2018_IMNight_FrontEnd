@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>IM 故事館</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- custom CSS-->
+	    <link href="../css/storyhouse_assist.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id = "mainContext">
+			<div class = "titles">
+				<div class="container">
+					<h1><b>IM 故事館</b></h1>
+				</div>
+			</div>
+			
+			<!-- story in each card-->
+			<div class = "story">
+				<div class = "row">
+				<div class = "col-md-4">
+					<div class = "card box-shadow"  data-toggle="modal" data-target="#exampleModal">
+						<div class="card-body">
+							<h4 class="card-title">最愛點名的教授</h4>
+							<h6 class="card-subtitle mb-2 text-warning">card-subtitle mb-2 text-warning</h6>
+							<p class="card-text">card-img-bottom</p>
+						</div>
+						<img class = "card-img-bottom" src = "http://popsych.org/wp-content/uploads/2014/05/article-new-thumbnail-ehow-images-a00-07-pc-become-college-professor-800x800.jpg" alt = "card-img">
+					</div>
+				
+					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "https://www.retailnews.asia/wp-content/uploads/2017/03/bubble-milk-tea.jpg" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">100杯奶茶</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+							<p class = "card-context">card-body with card-context <br>
+							card-img-top</p>
+							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						</div>
+					</div>
+					
+				</div>
+
+				<div class = "col-md-4">
+					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+							<p class = "card-context">card-body with card-context</p>
+						</div>
+						<img class = "card-img-bottom" src = "http://paolaelefante.com/wp-content/uploads/2015/10/coding-750x410.jpg" alt = "card-img">
+					</div>
+				
+					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+							<p class = "card-context">card-body with card-context <br>
+							card-img-top</p>
+							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "col-md-4">
+					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
+							<p class = "card-context">card-body with card-context <br>
+							card-img-top</p>
+							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						</div>
+					</div>
+				</div>	
+					<!-- modal -->
+					<div class="modal fade" id = "exampleModal" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">{{storyTitle}}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p v-html = "text"></p>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- link for jquery and bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- custom js -->
+		<script src = "../js/storyhouse_js.js"></script>
+		
+	</body>
+</html>
