@@ -1,0 +1,34 @@
+.titles{
+	background-color:#E0E0E0;
+	padding-bottom:3%;
+	padding-top:3%;
+}
+
+.container{
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical*/
+}
+
+.card{
+	margin-bottom:2%;
+	margin-left:3%;
+	width:30%;
+}
+
+.row{
+	padding:2%;
+	width:100%;
+	overflow:hidden;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.modal-content{
+	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)), url("../img/bgRed.jpg") no-repeat center center;
+}
+
+.textInBox{
+	padding: 1vw;
+	background-color: rgba(255,255,0,0.3);
+}
