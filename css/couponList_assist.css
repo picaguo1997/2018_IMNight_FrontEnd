@@ -1,3 +1,11 @@
+@media screen and (max-width:600px) {
+	.row{
+		display:inline;
+		width:100%;
+		text-align:center;
+	}
+}
+
 /*title*/
 .titles{
 	background-color:#E0E0E0;
@@ -17,16 +25,18 @@
 	align-items: center; /* align vertical*/
 }
 
-.row{
-	padding:2%;
-	width:100%;
-	overflow:hidden;
+.card{
+	margin-bottom:15px;
+	margin-left:auto;
+	margin-right:auto;
+	width:300px;
 }
 
-.card{
-	margin-bottom:2%;
-	margin-left:3%;
-	width:30%;
+.row{
+	padding-left:2%;
+	padding-top:2%;
+	width:100%;
+	overflow:hidden;
 }
 
 /* The switch - the box around the slider */
