@@ -107,6 +107,9 @@
 						<div class="modal-body">
 							<div class="row">
 								<div class="col-md-6">
+									<img :src="imgUrl" style="width:100%;">
+								</div>
+								<div class="col-md-6">
 									<center style="vertical-align: middle;">
 										<b>商店名稱:</b><br />
 										{{storeName}}<br />
@@ -121,13 +124,13 @@
 										<button v-if = "show" type = "button" class = "btn btn-outline-secondary" data-toggle="collapse" href = "#trade">我要使用</button>
 									</center>
 								</div>
-								<div class="col-md-6">
-									<img :src="imgUrl" style="width:20vw;">
-								</div>
 								<div id="trade" class="collapse" role="tabpanel">
 									<br />
-									<p><b class = "text-danger ml-2 mr-2">交易代碼:  </b><input id = "password" type = "text" placeholder = "商家交易代碼">
-									<button type="submit" value="Submit" id = "submit"><img  src="../img/checked.png"></button></p>
+									<p>
+										<b class = "text-danger ml-2 mr-2">交易代碼:  </b>
+										<input id = "password" type = "text" placeholder = "商家交易代碼">
+										<button type="submit" value="Submit" id = "submit"><img  src="../img/checked.png"></button>
+									</p>
 								</div>
 							</div>
 						</div>
