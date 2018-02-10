@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
 		<title>優惠券們</title>
 		
 		<!-- Bootstrap core CSS -->
@@ -40,60 +41,55 @@
 				
 				<!--couponList start-->
 				<div class="row">
-					<!-- first column -->
-					
-						<div class = "card box-shadow" v-if = "!checked || couponList.pizza" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "http://superchoicepizza.com/wp-content/uploads/revslider/pizza/pizza_adven_zestypepperoni.png">
-							<div class = "card-body">
-								<h4 class="card-title">免費披薩</h4>
-								<h6 class="card-subtitle mb-2 text-success">SoFree</h6>
-							</div>
+
+					<div class = "card box-shadow" v-if = "!checked || couponList.pizza" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://superchoicepizza.com/wp-content/uploads/revslider/pizza/pizza_adven_zestypepperoni.png">
+						<div class = "card-body">
+							<h4 class="card-title">免費披薩</h4>
+							<h6 class="card-subtitle mb-2 text-success">SoFree</h6>
 						</div>
-						
-						<div class = "card box-shadow" v-if = "!checked || couponList.cookie" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "https://fthmb.tqn.com/OKSt-9TR1u0uWKocCxlKBuUpObk=/3865x2576/filters:fill(auto,1)/freshly-baked-chocolate-chip-cookies-183426089-582cbc823df78c6f6a6d0f7f.jpg" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">Card title</h4>
-								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							</div>
+					</div>
+					
+					<div class = "card box-shadow" v-if = "!checked || couponList.cookie" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "https://fthmb.tqn.com/OKSt-9TR1u0uWKocCxlKBuUpObk=/3865x2576/filters:fill(auto,1)/freshly-baked-chocolate-chip-cookies-183426089-582cbc823df78c6f6a6d0f7f.jpg" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
 						</div>
-					
-					
-					<!-- second column -->
-						<div class = "card box-shadow" v-if = "!checked || couponList.nuts" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "http://i.dailymail.co.uk/i/pix/2017/11/08/16/4623608900000578-0-image-a-9_1510156892900.jpg" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">Card title</h4>
-								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							</div>
+					</div>
+
+					<div class = "card box-shadow" v-if = "!checked || couponList.nuts" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://i.dailymail.co.uk/i/pix/2017/11/08/16/4623608900000578-0-image-a-9_1510156892900.jpg" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
 						</div>
-						
-						<div class = "card box-shadow" v-if = "!checked || couponList.frozen" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "https://static01.nyt.com/images/2015/12/09/dining/09COOKING-SUGARCOOKIE/09COOKING-SUGARCOOKIE-superJumbo-v3.jpg" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">Card title</h4>
-								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							</div>
+					</div>
+					
+					<div class = "card box-shadow" v-if = "!checked || couponList.frozen" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "https://static01.nyt.com/images/2015/12/09/dining/09COOKING-SUGARCOOKIE/09COOKING-SUGARCOOKIE-superJumbo-v3.jpg" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
 						</div>
-					
-					
-					<!-- third column -->
-						<div class = "card box-shadow" v-if = "!checked || couponList.cloth" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">Card title</h4>
-								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							</div>
+					</div>
+
+					<div class = "card box-shadow" v-if = "!checked || couponList.cloth" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
 						</div>
-					
-						<div class = "card box-shadow" v-if = "!checked || couponList.cake" data-toggle="modal" data-target="#exampleModal">
-							<img class = "card-img-top" src = "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/6/13/0/FN_Ree-Drummond-Strawberry-Shortcake_s4x3.jpg.rend.hgtvcom.616.462.suffix/1402861522136.jpeg" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">Card title</h4>
-								<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							</div>
+					</div>
+				
+					<div class = "card box-shadow" v-if = "!checked || couponList.cake" data-toggle="modal" data-target="#exampleModal">
+						<img class = "card-img-top" src = "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/6/13/0/FN_Ree-Drummond-Strawberry-Shortcake_s4x3.jpg.rend.hgtvcom.616.462.suffix/1402861522136.jpeg" alt = "card-img-top">
+						<div class = "card-body">
+							<h4 class="card-title">Card title</h4>
+							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
 						</div>
-					
+					</div>
+				
 				</div>
 				<!-- couponList End -->
 			</div>
