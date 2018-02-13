@@ -6,11 +6,28 @@ body {
 	height: 100%;
 }
 
-.homepage {
-	padding: 0;
-	background: url("../img/home.jpg") no-repeat center center;
-	height: 100%;
+#home-bg {
+	background: url("../img/home-bg.png") no-repeat center center;
 	background-size: cover;
+
+	padding: 0;
+	height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+#home-word {
+	background: url("../img/home-word.png") no-repeat center center;
+	background-size: cover;
+
+	padding: 0;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
 }
 
 .btn-row {
@@ -18,4 +35,13 @@ body {
 	margin-left: 0;
 	padding-top: 80vh;
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+	#home-word {
+		background-size: 250% 80%;
+	}
+	.btn-row {
+		padding-top: 75vh;
+	}
 }
