@@ -12,10 +12,10 @@ body {
 
 	padding: 0;
 	height: 100%;
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 #home-word {
@@ -27,7 +27,7 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	z-index: 0;
+	/* z-index: 0; */
 }
 
 .btn-row {
@@ -37,11 +37,45 @@ body {
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
 }
 
+#sky-land-bg {
+	background-color: white;
+	position: relative;
+}
+
+.intro-text {
+	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+	font-size: 2.5vh;
+	font-weight: 900;
+	color: #272727;
+}
+
+#concept-space {
+	margin-top: 8vh;
+	margin-bottom: 10vh;
+}
+
+#concept-text {
+	margin-top: 8vh;
+	margin-bottom: 5vh;
+	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+	font-weight: 900;
+	color: #272727;
+}
+
+#concept-img-space {
+	background-color: #e0e0e0;
+	width: 80%;
+	height: 60vh;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;
 	}
 	.btn-row {
 		padding-top: 75vh;
+	}
+	#concept-space {
+		margin-top: 0vh;
 	}
 }
