@@ -55,7 +55,9 @@
 								<div class="modal-body">
 									<img :src="e.imgUrl" class = "logo">
 									<p class = "textBreak">{{e.Info}}</p>
-									<img class = "egg" src = "../img/egg.png">
+									<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" v-on:click= "crack(e.num)">
+									<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
+									<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
 								</div>
 							</center>
 						</div>
