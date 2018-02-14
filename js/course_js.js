@@ -52,7 +52,6 @@ var resource = new Vue({
 		crack:function(k){
 			/* need to add 1 point*/
 			k = String(k);
-			console.log('#egg'+k);
 			$('#egg'+k).addClass('hide');
 			
 			$('#eggDown'+k).removeClass('hide');
