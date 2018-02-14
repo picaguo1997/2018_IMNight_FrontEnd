@@ -179,7 +179,7 @@
 }
 
 .egg{
-	height:50px;
+	width:30px;
 	animation:shake 0.8s infinite;
 	transition: 0.5s ease;
 }
@@ -197,4 +197,33 @@
 .egg:active{
 	position:relative;
 	top:-20px;
+}
+
+.eggdown,.eggup{
+	width:30px;
+	position:relative;
+	top:-10px;
+	transition:0.3s ease;
+}
+
+.hide{
+	display:none;
+}
+
+/* 上下蛋殼之動畫 */
+.upAnimate{
+	transform:translateY(10px);
+}
+
+.downAnimate{
+	animation:left 1s;
+	top:-5px;
+}
+
+@keyframes left{
+	0%,25%{
+		transform:rotate(0deg);
+	}100%{
+		transform:rotate(-40deg);
+	}
 }
