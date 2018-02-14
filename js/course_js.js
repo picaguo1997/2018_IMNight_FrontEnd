@@ -49,6 +49,18 @@ var resource = new Vue({
 				}
 			}		
 		},
+		crack:function(k){
+			/* need to add 1 point*/
+			k = String(k);
+			console.log('#egg'+k);
+			$('#egg'+k).addClass('hide');
+			
+			$('#eggDown'+k).removeClass('hide');
+			$('#eggDown'+k).addClass('downAnimate');
+			
+			$('#eggUp'+k).removeClass('hide');
+			$('#eggUp'+k).addClass('upAnimate');
+		}
 	}
 });
 
