@@ -1,9 +1,19 @@
-html {
+/* 滿版 */
+/* html {
 	height: 100%;
 }
 
 body {
 	height: 100%;
+} */
+
+/* 非滿版 */
+html {
+	height: 90%;
+}
+
+body {
+	height: 90%;
 }
 
 #home-bg {
@@ -12,29 +22,38 @@ body {
 
 	padding: 0;
 	height: 100%;
-    /* position: absolute; */
     top: 0px;
     left: 0px;
-    /* z-index: -1; */
 }
 
 #home-word {
-	background: url("../img/home-word.png") no-repeat center center;
+	background: url("../img/home-word.png") no-repeat;
 	background-size: cover;
+
+	/* 滿版 */
+	/* background-position: center center; */
+	/* 非滿版 */
+	background-position: center -15vh;
 
 	padding: 0;
 	height: 100%;
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	/* z-index: 0; */
 }
 
 .btn-row {
 	margin-right: 0;
 	margin-left: 0;
-	padding-top: 80vh;
+
+	/* 滿版 */
+	/* padding-top: 80vh; */
+
+	/* 非滿版 */
+	padding-top: 65vh;
+
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+	opacity: 0.95;
 }
 
 #sky-land-bg {
@@ -62,20 +81,27 @@ body {
 	color: #272727;
 }
 
-#concept-img-space {
-	background-color: #e0e0e0;
-	width: 80%;
-	height: 60vh;
-}
-
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;
 	}
 	.btn-row {
-		padding-top: 75vh;
+		/* 滿版 */
+		/* padding-top: 75vh; */
+
+		/* 非滿版 */
+		padding-top: 55vh;
 	}
 	#concept-space {
 		margin-top: 0vh;
+	}
+
+	/* 非滿版 */
+	html {
+		height: 85%;
+	}
+
+	body {
+		height: 85%;
 	}
 }
