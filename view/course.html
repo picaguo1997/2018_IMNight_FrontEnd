@@ -20,78 +20,58 @@
 				</div>
 			</div>
 			
-			<div class = "course">
+			<div class = "main">
 				<div class = "row">
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">程式設計</h4>
-							<h6 class="card-subtitle mb-2 text-success">孔令傑 教授</h6>
-							<p class = "card-context">card-img-top</p>
-							<footer class="blockquote-footer">大一必修</footer>
+					<div class = "space" v-for = "e in classes" >
+						<!--front-->
+						<div class = "card" v-bind="{id: 'card'+e.num}" v-on:click = "move(e.num)">
+							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">{{e.name}}</h4>
+								<h6 class="card-subtitle mb-2 text-success">{{e.teacher}}</h6>
+							</div>
 						</div>
-					</div>
-
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
-						</div>
-					</div>
-				
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://paolaelefante.com/wp-content/uploads/2015/10/coding-750x410.jpg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
-						</div>
-					</div>
-				
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						
+						<!--back-->
+						<div class = "box transform" v-bind="{id: 'back'+e.num}">
+							<h5>{{e.more}}
+								<span><img class = "moreBtn" data-toggle="modal" :data-target="'#exampleModal'+e.num" src = "../img/play-button.png"></span>
+							</h5>
 						</div>
 					</div>
 				</div>
-					
-				<div class="modal fade" id = "exampleModal" tabindex="-1" role="dialog">
-					<div class="modal-dialog modal-lg" role="document">
+				
+				<!--modal-->
+				<div class="modal fade" v-for = "e in classes" v-bind = "{id: 'exampleModal'+e.num}" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title">{{courseName}}</h5>
+								<h5 class="modal-title">{{e.name}}</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body">
-								<center>
-									<p class = "textInBox text-muted" style = "font-style: oblique;">{{slogan}}</p>
-								<iframe height = "200vh" src="https://www.youtube.com/embed/lBzCooNboTI"></iframe></center>
-								<p v-html = "Info"></p>								
-							</div>
+							<center>
+								<div class="modal-body">
+									<img :src="e.imgUrl" class = "logo">
+									<p class = "textBreak">{{e.Info}}</p>
+									<img class = "egg" src = "../img/egg.png">
+								</div>
+							</center>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		
+		
+		
+
 		<!-- link for jquery and bootstrap -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-		
+
 		<!-- vue -->
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		
