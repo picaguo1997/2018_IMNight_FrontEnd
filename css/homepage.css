@@ -84,6 +84,9 @@ body {
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;
+
+		/* 非滿版 */
+		background-position: center -10vh;
 	}
 	.btn-row {
 		/* 滿版 */
