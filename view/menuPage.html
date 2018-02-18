@@ -80,7 +80,7 @@
       <div class="modal fade" id="remindModal" tabindex="-1" role="dialog" aria-labelledby="remindModalLabel" aria-hidden="false" v-if="loggedIn">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
-            
+
             <div class="modal-header">
               <h5 class="modal-title jh" id="remindModalLabel">提醒</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -88,15 +88,16 @@
               </button>
             </div>
 
-            <div class="modal-body jh">
+            <div v-if="!(drawnCard&takenDiscount)" class="modal-body jh pb-0">
               <h5 class="jh">
                 您今日尚未 <a v-if="!drawnCard" id="draw-card" data-toggle="tooltip" title="抽卡！">抽卡</a> 
-                及 <a v-if="!takenDiscount" id="draw-discount" data-toggle="tooltip" title="抽優惠！">領取每日優惠</a>
+                <p v-if="!(drawnCard|takenDiscount)" style="display: inline-block;">及</p>
+                <a v-if="!takenDiscount" id="draw-discount" data-toggle="tooltip" title="抽優惠！">領取每日優惠</a>
               </h5>
+              <hr>
             </div>
 
-            <div class="modal-body">
-              <hr>
+            <div class="modal-body pt-3">
               <h5 class="jh">最新消息</h5>
               <div class="row justify-content-center">
                 <div class="col-10 col-sm-8">

@@ -1,4 +1,4 @@
-let login = true;
+let login = false;
 let cardDrawn = false;
 let discountTaken = false;
 
