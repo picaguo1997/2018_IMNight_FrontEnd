@@ -14,30 +14,41 @@
 
 <body>
   <!-- 主頁部分 -->
-  <div class="container-fluid remindPage">
+  <div class="container-fluid" id="menuPage">
     <div class="bgRed">
-      <div class="row justify-content-center remindRow">
-        
-        <div class="col-10 col-sm-4" style="opacity: 0.8">
-          <p class="text-left px-5 remind-text">提醒</p>
-          <p class="text-left px-5 remind-text">您今日尚未 <a id="draw-card" data-toggle="tooltip" title="抽卡！">抽卡</a> 及 <a id="draw-discount" data-toggle="tooltip" title="抽優惠！">領取每日優惠</a></p>
-          <br>
-          <br>
-          <p class="text-left px-5 remind-text">最新消息</p>
-          <div class="row justify-content-center">
-            <div class="col-10">
-              <ol id="news-text">
-                <li>This is a list item</li>
-                <li>Another list item</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ol>     
+
+      <div class="row justify-content-center pt-5 pb-4 no-marg">
+        <div class="col-10 col-sm-4" style="opacity: 0.7">
+          <h1 class="text-center jh">遊戲規則</h1>
+          <h5 class="text-center jh text-muted">原則很簡單，累積點數抽大獎</h3>
+        </div>
+      </div>
+
+      <div class="row justify-content-center no-marg">
+          <div class="col-8 col-md-4 col-xl-2 my-3">
+            <div class="card text-center rule-card">
+              <div class="card-body">
+                <h5 class="card-title jh" style="font-size: 3vh;">累積點數方式</h5>
+                <h6 class="jh text-muted lh">閱讀每日文章<br>領取每日優惠券<br>抽每日資管人<br>以及額外的任務</h6>      
+              </div>
             </div>
           </div>
-        </div>
-
+          <div class="col-8 col-md-4 col-xl-2 my-3">
+            <div class="card text-center rule-card">
+              <div class="card-body">
+                <h5 class="card-title jh" style="font-size: 3vh;">獎品</h5>          
+                <h6 class="jh text-muted lh">之夜當天依照累積點數，以一點為一張摸彩券的形式，玩家爭取越多點數來下注在想要的獎品上。<br>不定期活動抽獎<br>可每日領取好康優惠券</h6>      
+              </div>
+            </div>
+          </div>
       </div>
+
+      <div class="row justify-content-center my-4 no-marg">
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/people.png" alt="人緣" class="img-fluid"></div>
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/sky.png" alt="天緣" class="img-fluid"></div>
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/land.png" alt="地緣" class="img-fluid"></div>
+      </div>
+
     </div>
   </div>
   <!-- 主頁部分結束 -->
