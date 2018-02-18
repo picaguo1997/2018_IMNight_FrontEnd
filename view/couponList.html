@@ -24,7 +24,7 @@
 			
 			<!--control panal-->
 			<div class = "main">			
-				<!-- search / switch -->
+				<!-- switch -->
 				<nav class="navbar sticky-top navbar-light">
 					<div class = "switchItem" >
 						<p>只顯示可使用之優惠券
@@ -38,107 +38,68 @@
 					</div>
 				</nav>
 				
-				
 				<!--couponList start-->
 				<div class="row">
-
-					<div class = "card box-shadow" v-if = "!checked || couponList.pizza" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://superchoicepizza.com/wp-content/uploads/revslider/pizza/pizza_adven_zestypepperoni.png">
-						<div class = "card-body">
-							<h4 class="card-title">免費披薩</h4>
-							<h6 class="card-subtitle mb-2 text-success">SoFree</h6>
+					<div v-for = "e in coupons">
+						<div class = "card box-shadow" :id = "'coupen'+e.num" v-if = "!checked || e.usable" data-toggle="modal" :data-target="'#modal'+e.num">
+							<img class = "card-img-top" :src = "e.imgUrl">
+							<div class = "card-body">
+								<h4 class="card-title">{{e.name}}</h4>
+								<h6 class="card-subtitle mb-2 text-success">{{e.shop}}</h6>
+							</div>
 						</div>
 					</div>
-					
-					<div class = "card box-shadow" v-if = "!checked || couponList.cookie" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "https://fthmb.tqn.com/OKSt-9TR1u0uWKocCxlKBuUpObk=/3865x2576/filters:fill(auto,1)/freshly-baked-chocolate-chip-cookies-183426089-582cbc823df78c6f6a6d0f7f.jpg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-						</div>
-					</div>
-
-					<div class = "card box-shadow" v-if = "!checked || couponList.nuts" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://i.dailymail.co.uk/i/pix/2017/11/08/16/4623608900000578-0-image-a-9_1510156892900.jpg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-						</div>
-					</div>
-					
-					<div class = "card box-shadow" v-if = "!checked || couponList.frozen" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "https://static01.nyt.com/images/2015/12/09/dining/09COOKING-SUGARCOOKIE/09COOKING-SUGARCOOKIE-superJumbo-v3.jpg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-						</div>
-					</div>
-
-					<div class = "card box-shadow" v-if = "!checked || couponList.cloth" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-						</div>
-					</div>
-				
-					<div class = "card box-shadow" v-if = "!checked || couponList.cake" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2014/6/13/0/FN_Ree-Drummond-Strawberry-Shortcake_s4x3.jpg.rend.hgtvcom.616.462.suffix/1402861522136.jpeg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-						</div>
-					</div>
-				
 				</div>
-				<!-- couponList End -->
-			</div>
 			
-			<!-- pop out modal Start-->
-			<div class="modal fade" id = "exampleModal" tabindex="-1" role="dialog">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title"><center>{{title}}</center></h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="row">
-								<div class="col-md-6">
-									<img :src="imgUrl" style="width:100%;">
+				<!-- pop out modal Start-->
+				<div v-for = "e in coupons">
+					<div class="modal fade" :id = "'modal'+e.num" tabindex="-1" role="dialog">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content" :id = "'modal-content'+e.num">
+								<div class="modal-header">
+									<h5 class="modal-title">{{e.name}}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
 								</div>
-								<div class="col-md-6">
-									<center style="vertical-align: middle;">
-										<b>商店名稱:</b><br />
-										{{storeName}}<br />
-										<b>優惠券內容:</b><br />
-										{{couponInfo}}<br />
-										<b>使用期限:</b><br />
-										{{deadLine}}<br />
-										<br />
-										<a href="shop.html"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
-										
-										<!-- trade -->
-										<button v-if = "show" type = "button" class = "btn btn-outline-secondary" data-toggle="collapse" href = "#trade">我要使用</button>
+								
+								<div class = "back hide" :id = "'back'+e.num">
+									<center class = "backContext">
+										<h4>確定要使用嗎?</h4>
+										<p>按錯就掰掰了喔QAQ</p>
+										<button class = "btn btn-secondary" @click = "dcheck(e.num)">取消</button>
+										<button class = "btn btn-secondary" @click = "submit(e.num)">確認</button>
 									</center>
 								</div>
-								<div id="trade" class="collapse" role="tabpanel">
-									<br />
-									<p>
-										<b class = "text-danger ml-2 mr-2">交易代碼:  </b>
-										<input id = "password" type = "text" placeholder = "商家交易代碼">
-										<button type="submit" value="Submit" id = "submit"><img  src="../img/checked.png"></button>
-									</p>
+								
+								<div class="modal-body" :id = "'modal-body'+e.num">
+									<div class="row">
+										<div class = "front" :id = "'front'+e.num">
+											<div class="col-md-6">
+												<img :src="e.imgUrl" style="width:100%;">
+											</div>
+											<div class="col-md-6">
+												<center>
+													<b>商店名稱:</b><br />
+													{{e.shop}}<br />
+													<b>優惠券內容:</b><br />
+													{{e.detail}}<br />
+													<b>使用期限:</b><br />
+													{{e.time}}<br />
+													<br />
+													<a href="shop.html"><button type = "button" class = "btn btn-secondary">商家列表</button></a>
+													<button v-if = "e.usable" class = "btn btn-secondary" @click = "check(e.num)">我要使用</button>
+												</center>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- pop out modal End-->
 			</div>
-			<!-- pop out modal End-->
-			
 		</div>
 		
 		<!-- link for jquery and bootstrap -->
