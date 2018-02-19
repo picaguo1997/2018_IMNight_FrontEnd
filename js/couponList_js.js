@@ -55,19 +55,15 @@ var resource = new Vue({
 		]
 	},
 	methods:{
-		check:function(k){
+		delayShow:function(k){
 			$('#back'+k).removeClass('hide');
-			$('#modal-body'+k).addClass('deleteStyle');
-			$('#row'+k).addClass('deleteStyle');
 			$('#front'+k).addClass('shrink');
-			$('#modal-content'+k).addClass('changebg');
+			$('#modal-content'+k).addClass('changeBg');
 		},
 		dcheck:function(k){
 			$('#back'+k).addClass('hide');
-			$('#modal-body'+k).removeClass('deleteStyle');
-			$('#row'+k).removeClass('deleteStyle');
 			$('#front'+k).removeClass('shrink');
-			$('#modal-content'+k).removeClass('changebg');
+			$('#modal-content'+k).removeClass('changeBg');
 		},
 		submit:function(k){
 			this.coupons[k-1].usable = false;
