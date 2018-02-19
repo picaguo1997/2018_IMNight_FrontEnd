@@ -40,9 +40,10 @@
 				
 				<!--couponList start-->
 				<div class="row">
-					<div v-for = "e in coupons">
+					<div class = "cardInRow" v-for = "e in coupons">
 						<div class = "card box-shadow" :id = "'coupen'+e.num" v-if = "!checked || e.usable" data-toggle="modal" :data-target="'#modal'+e.num">
 							<img class = "card-img-top" :src = "e.imgUrl">
+							
 							<div class = "card-body">
 								<h4 class="card-title">{{e.name}}</h4>
 								<h6 class="card-subtitle mb-2 text-success">{{e.shop}}</h6>
@@ -63,15 +64,6 @@
 									</button>
 								</div>
 								
-								<div class = "back hide" :id = "'back'+e.num">
-									<center class = "backContext">
-										<h4>確定要使用嗎?</h4>
-										<p>按錯就掰掰了喔QAQ</p>
-										<button class = "btn btn-secondary" @click = "dcheck(e.num)">取消</button>
-										<button class = "btn btn-secondary" @click = "submit(e.num)">確認</button>
-									</center>
-								</div>
-								
 								<div class="modal-body" :id = "'modal-body'+e.num">
 									<div class="row">
 										<div class = "front" :id = "'front'+e.num">
@@ -87,14 +79,26 @@
 													<b>使用期限:</b><br />
 													{{e.time}}<br />
 													<br />
-													<a href="shop.html"><button type = "button" class = "btn btn-secondary">商家列表</button></a>
-													<button v-if = "e.usable" class = "btn btn-secondary" @click = "check(e.num)">我要使用</button>
+													<a href="shop.html"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
+													<button v-if = "e.usable" class = "btn btn-outline-secondary" @click = "delayShow(e.num)">我要使用</button>
 												</center>
 											</div>
 										</div>
 									</div>
+									
+									<div class = "back hide" :id = "'back'+e.num">
+										<center>
+											<h4><b>確定要使用嗎?</b></h4>
+											<p>按錯就掰掰了喔QAQ</p>
+											<button class = "btn btn-secondary" @click = "dcheck(e.num)">取消</button>
+											<button class = "btn btn-secondary" @click = "submit(e.num)">確認</button>
+										</center>
+									</div>	
+									
 								</div>
 							</div>
+							
+													
 						</div>
 					</div>
 				</div>
