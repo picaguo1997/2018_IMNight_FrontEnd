@@ -51,6 +51,17 @@
 	transition:all 1s;
 }
 
+.tag{
+	z-index:5;
+	width:100px;
+	height:100px;
+	position:relative;
+	top:20%;
+	left:210px;
+	background-color:yellow;
+	-webkit-clip-path: polygon(49% 0, 100% 53%, 100% 100%, 0 0);
+}
+
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 .row{
@@ -129,22 +140,34 @@ input:checked + .slider:before {
 }
 
 /* modal */
-.modal-content {
+.modal-header{
+	border:none !important;
+}
+
+.modal-content{
+	border:none !important;
 	vertical-align: middle;
 	background-color:red;
 	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)), url("../img/bgRed.jpg") no-repeat center center;
 	height: 100%;
 	background-size: cover;
-}
-/* effect on modal-content*/
-.changebg{
-	color:white;
-	background:url("../img/bg.jpg") no-repeat center center;
-	background-size: cover;
+	transition:all 1s;
 }
 
-.modal-body{
-	transition:all 1s;
+.changeBg{
+	background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0)), url("../img/bg.jpg");
+	background-size: cover;
+	animation:modalChangeBg 1s;
+}
+
+@keyframes modalChangeBg{
+	0%{
+		background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,1)), url("../img/bg.jpg");
+		background-size: cover;
+	}100%{
+		background: linear-gradient(rgba(255,255,255,1),rgba(255,255,255,0)), url("../img/bg.jpg");
+		background-size: cover;
+	}
 }
 
 .col-md-6{
@@ -153,35 +176,43 @@ input:checked + .slider:before {
 }
 
 .front{
+	z-index:3;
 	transition:all 1s;
 }
 
 .back{
+	z-index:4;
 	position:relative;
 	opacity:1;
-	top:20px;
+	top:-20px;
+	padding:20px;
 	width:100%;
 	height:150px;
 	color:white;
+	transition:all 2s;
 }
 
 .hide{
-	display:none;
-}
-
-
-
-.deleteStyle{
-	padding:0px !important;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+	position:relative;
+	top:0px;
+	opacity:0;
+	height:0px;
+	padding:0px;
 }
 
 .shrink{
 	opacity:0;
 	height:0px;
+	padding:0px;
+	animation:shrinkFront 1.5s;
+}
+
+@keyframes shrinkFront{
+	0%{
+		height:300px;
+	}100%{
+		height:0px;
+	}
 }
 
 /* vertical-align modal*/
