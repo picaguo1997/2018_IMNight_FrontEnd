@@ -40,6 +40,14 @@ body {
 	position: absolute;
 	top: 0px;
 	left: 0px;
+
+	display: none;
+	/* animation: fade-in 5s; */
+}
+
+#but-space {
+	position: absolute;
+	top: 65vh;
 }
 
 .btn-row {
@@ -50,10 +58,14 @@ body {
 	/* padding-top: 80vh; */
 
 	/* 非滿版 */
-	padding-top: 65vh;
+	/* top: 65vh; */
 
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
 	opacity: 0.95;
+}
+
+#start {
+	display: none;
 }
 
 #sky-land-bg {
@@ -81,6 +93,18 @@ body {
 	color: #272727;
 }
 
+.hideme {
+	opacity: 0;
+}
+
+.transition {
+	transform: scale(1.2);
+}
+
+.enlarge {
+	transition: .4s ease-in-out;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;
@@ -88,12 +112,13 @@ body {
 		/* 非滿版 */
 		background-position: center -10vh;
 	}
-	.btn-row {
+	#but-space {
 		/* 滿版 */
 		/* padding-top: 75vh; */
 
 		/* 非滿版 */
-		padding-top: 55vh;
+		/* padding-top: 55vh; */
+		top: 55vh;
 	}
 	#concept-space {
 		margin-top: 0vh;
