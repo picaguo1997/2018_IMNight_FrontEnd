@@ -1,3 +1,11 @@
+.subtitle, .detail{
+	color:rgba(0,0,0,0.5);
+}
+
+.title,.modal-title{
+	color:rgba(0,0,0,0.7);
+}
+
 .modal-content:before{
 	content:"";
     position: absolute;
