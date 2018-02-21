@@ -57,3 +57,24 @@ body {
 #draw-discount {
 	font-size: 1.45rem;
 }
+
+.transition {
+	transform: scale(1.2);
+}
+
+.enlarge {
+	transition: .4s ease-in-out;
+}
+
+.floating {
+	animation: .4s, float, infinite;
+}
+
+@keyframes float {
+	50% {
+		transform: scale(1.2);
+	}
+	to {
+		transform: scale(0.83);
+	}
+} 
