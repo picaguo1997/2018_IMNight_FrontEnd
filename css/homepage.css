@@ -95,6 +95,16 @@ body {
 	transition: .4s ease-in-out;
 }
 
+.btn-change{
+    border:0px;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    box-shadow:0 0 0 #31708f inset;
+}
+.btn-change:hover{
+    box-shadow:200px 0 0 #31708f inset;
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;

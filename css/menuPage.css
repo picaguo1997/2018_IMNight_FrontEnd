@@ -58,23 +58,25 @@ body {
 	font-size: 1.45rem;
 }
 
-.transition {
+/* .transition {
 	transform: scale(1.2);
-}
+} */
 
 .enlarge {
-	transition: .4s ease-in-out;
+	transition: 1s ease-in-out;
 }
 
 .floating {
-	animation: .4s, float, infinite;
+	-webkit-animation: float .6s infinite alternate;
+	-o-animation: float .6s infinite alternate;
+	animation: float .6s infinite alternate;
 }
 
 @keyframes float {
-	50% {
-		transform: scale(1.2);
+	from {
+		transform: scale(1);
 	}
 	to {
-		transform: scale(0.83);
+		transform: scale(1.1);
 	}
 } 
