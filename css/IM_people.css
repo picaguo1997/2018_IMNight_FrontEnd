@@ -1,0 +1,68 @@
+.modal-content:before{
+	content:"";
+    position: absolute;
+    width: 100%;
+    height:100%;
+  	opacity:0.3;
+	top:0px;
+	background-image:url(../img/KV_OB.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: contain;
+	animation: bgFadeIn 4.0s;
+	z-index: -1;
+}
+
+.modal-content{
+	z-index: 0;
+}
+
+.person-footer-button:hover{
+	-webkit-animation: shake 0.1s ease-in-out 0.1s infinite alternate;
+}
+
+@-webkit-keyframes shake {
+	from {
+	   -webkit-transform: rotate(10deg);
+	}
+	to {
+	  -webkit-transform-origin:center center;
+	  -webkit-transform: rotate(-10deg);
+	}
+}
+
+.modal-content > .modal-body, .modal-header {
+	animation: slidein 1.0s;
+}
+
+.person:hover{
+	transform: scale(1.05,1.05);
+}
+
+.person{
+	transition: 1.0s;
+}
+
+@keyframes bgFadeIn{
+	from{
+		opacity: 0.0;
+	}
+	to{
+		opacity: 0.3;
+	}
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    left: -20px;
+  }
+  to {
+    left: 0;
+  }
+}
