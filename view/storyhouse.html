@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
 		<title>IM 故事館</title>
 		
 		<!-- Bootstrap core CSS -->
@@ -22,75 +23,38 @@
 			<!-- story in each card-->
 			<div class = "story">
 				<div class = "row">
-				<div class = "col-md-4">
-					<div class = "card box-shadow"  data-toggle="modal" data-target="#exampleModal">
-						<div class="card-body">
-							<h4 class="card-title">最愛點名的教授</h4>
-							<h6 class="card-subtitle mb-2 text-warning">card-subtitle mb-2 text-warning</h6>
-							<p class="card-text">card-img-bottom</p>
+					<div class = "cardInRow" v-for = "e in stories" >
+						<div class = "card box-shadow" data-toggle="modal" :data-target="'#modal'+e.num" :style="{ backgroundImage: 'url(' + e.imgUrl + ')' }">
+						<!--	<img class="card-img" :src = "e.imgUrl" alt="Card image">-->
 						</div>
-						<img class = "card-img-bottom" src = "http://popsych.org/wp-content/uploads/2014/05/article-new-thumbnail-ehow-images-a00-07-pc-become-college-professor-800x800.jpg" alt = "card-img">
-					</div>
-				
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "https://www.retailnews.asia/wp-content/uploads/2017/03/bubble-milk-tea.jpg" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">100杯奶茶</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						
+						<div class = "triangle">
 						</div>
-					</div>
-					
-				</div>
-
-				<div class = "col-md-4">
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context</p>
-						</div>
-						<img class = "card-img-bottom" src = "http://paolaelefante.com/wp-content/uploads/2015/10/coding-750x410.jpg" alt = "card-img">
-					</div>
-				
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
-						</div>
-					</div>
-				</div>
-				
-				<div class = "col-md-4">
-					<div class = "card box-shadow" data-toggle="modal" data-target="#exampleModal">
-						<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-						<div class = "card-body">
-							<h4 class="card-title">Card title</h4>
-							<h6 class="card-subtitle mb-2 text-success">card-subtitle mb-2 text-success</h6>
-							<p class = "card-context">card-body with card-context <br>
-							card-img-top</p>
-							<footer class="blockquote-footer">blockquote-footer<cite title="cite"> Cite</cite></footer>
+						<div class = "tag">
+							<h4 class="card-title"><b>{{e.title}}</b></h4>
+							<h6 class="card-subtitle">{{e.detail}}</h6>
 						</div>
 					</div>
 				</div>	
-					<!-- modal -->
-					<div class="modal fade" id = "exampleModal" tabindex="-1" role="dialog">
+				
+				<!-- modal -->
+				<div v-for = "e in stories">
+					<div class="modal fade" :id = "'modal'+e.num" tabindex="-1" role="dialog">
 						<div class="modal-dialog modal-lg" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5 class="modal-title">{{storyTitle}}</h5>
+									<h5 class="modal-title">{{e.title}}</h5>
 									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 										<span aria-hidden="true">&times;</span>
 									</button>
 								</div>
 								<div class="modal-body">
-									<p v-html = "text"></p>	
+									<p v-html = "e.info"></p>
+									<center v-on:click= "crack(e.num)">
+										<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" >
+										<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
+										<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
+									</center>
 								</div>
 							</div>
 						</div>
