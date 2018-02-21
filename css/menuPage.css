@@ -6,10 +6,10 @@ body {
 	height: 100%;
 }
 
-.remindPage {
+#menuPage {
 	padding: 0;
 	height: 100%;
-	background-size: cover;
+	/* background-size: cover; */
 }
 
 .bgRed {
@@ -18,29 +18,42 @@ body {
 	background-size: cover;
 }
 
-.remindRow {
-	margin-right: 0;
-	margin-left: 0;
-	padding-top: 25vh;
-}
-
-.remind-text {
-	font-size: 25px;
+.jh {
 	font-weight: 900;
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
 	color: #272727;
-	/* margin-bottom: 2px; */
 }
 
-#news-text {
-	font-size: 20px;
-	font-weight: 900;
-	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
-	color: #5b5b5b;
+.no-marg {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.rule-card {
+	height: 100%;
+}
+
+.card { 
+	background-color: rgba(245, 245, 245, 0.2); 
+}
+
+.lh {
+	line-height: 1.8rem;
+}
+
+#loginModal,
+#remindModal {
+	display: block;
 }
 
 #draw-card:hover, 
 #draw-discount:hover {
 	color: red;
 	cursor: pointer;
+	/* font-size: 1.5rem; */
+}
+
+#draw-card, 
+#draw-discount {
+	font-size: 1.45rem;
 }
