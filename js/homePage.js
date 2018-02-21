@@ -1,16 +1,22 @@
-$(window).on('load', function() {
-	$('#home-word').fadeIn(1000, 'swing', function() {
-		$('#start').show("blind", 500);
-	});
-	
-	// for fade in on scrolled (on seen)
+function fadeInImg(obj) {
+	obj.animate({'opacity':'1'},1500);
+}
+
+function fadeInImgInit(obj) {
+	// for fade in on seen
 	$('.hideme').each(function() {
 		let window_bot = $(window).scrollTop() + $(window).height();
 		let obj_top = $(this).offset().top;
 		if (window_bot > obj_top) {
-			$(this).animate({'opacity':'1'},1500);
+            fadeInImg($(this));			
 		}
 	})
+}
+
+$(window).on('load', function() {
+	$('#home-word').fadeIn(1000, 'swing', function() {
+		$('#start').show("blind", 500, fadeInImgInit);
+	});
 
     /* Every time the window is scrolled ... */
     $(window).scroll( function(){
@@ -22,7 +28,8 @@ $(window).on('load', function() {
             var top_of_window = $(window).scrollTop();
 
             if( bottom_of_window > top_of_object ){
-                $(this).animate({'opacity':'1'},1500);
+                // $(this).animate({'opacity':'1'},1500);
+                fadeInImg($(this));
             }
         }); 
     }); 
