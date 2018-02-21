@@ -2,23 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
+	
 	<title>Show Introduction</title>
 	
-	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-	
-	<script src="../js/vue.min.js"></script>
-	
+	<!-- custom css -->
 	<link rel="stylesheet" href="../css/show_intro.css">
 
+	<!-- bootstrap css -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 class="title">表演介紹</h2>
@@ -26,17 +21,16 @@
 			</div>
 		</div>
 		<div class="row" id="show-list">
-			
 			<template v-for="show in shows">
 				<div class="col-lg-4">
-					<button type="button" class="btn btn-link" data-toggle="modal" data-target="#{{$index}}-Modal">
-		  				<img src="{{ show.img }}" class="img-fluid rounded" alt="Responsive image">
-					</button>
+					<div class="card" data-toggle="modal" data-target="#{{$index}}-Modal">
+						<img class="card-img" src="{{ show.img }}">
+					</div>
 				</div>
-
+			
 				<!-- Modal -->
 				<div class="modal fade" id="{{ $index }}-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  	<div class="modal-dialog" role="document">
+				  	<div class="modal-dialog modal-md modal-dialog-centered">
 				    	<div class="modal-content">
 				     		<div class="modal-header">
 				       			<h5 class="modal-title" id="exampleModalLabel">{{ show.name }}</h5>
@@ -60,10 +54,6 @@
 										<li class="detail" v-for="mb in show.mbs">{{mb}}</li>
 									</ul>
 								</div>
-				      	  		
-				      		</div>
-				      		<div class="modal-footer">
-				        		<!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
 				      		</div>
 				    	</div>
 				  	</div>
@@ -72,8 +62,20 @@
 		</div>
 	</div>
 	
-
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	
+	<!-- bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+	
+	<!-- vue.js -->
+	<script src="../js/vue.min.js"></script>
+	
+	<!-- custom js -->
 	<script src="../js/show_intro.js"></script>
+
 </body>
 
 

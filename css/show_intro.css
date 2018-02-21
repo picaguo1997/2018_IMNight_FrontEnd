@@ -3,15 +3,33 @@
     position: absolute;
     width: 100%;
     height:100%;
-  	opacity:0.1;
+  	opacity:0.3;
 	top:0px;
 	background-image:url(../img/KV_OB.png);
 	background-repeat:no-repeat;
 	background-position:center;
-	/* background-attachment: fixed; */
 	background-size: contain;
+	animation: fadein 1.0s;
+	z-index: -1;
 }
 
+.modal-content{
+	z-index: 0;
+}
+
+.card{
+	transition: 1s;
+	margin: 10px;
+}
+
+.card:hover{
+	transform: scale(1.05,1.05);
+}
+
+.card-img{
+	width: 100%;
+	height: 100%;
+}
 
 .subtitle, .detail{
 	color:rgba(0,0,0,0.5);
@@ -19,4 +37,35 @@
 
 .title,.modal-title{
 	color:rgba(0,0,0,0.7);
+}
+
+.modal-content * {
+	animation: slidein 0.7s;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  20% {
+    left: -20px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fadein{
+	from {
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.15;
+	}
+	to {
+		opacity: 0.3;
+	}
 }

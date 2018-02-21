@@ -7,3 +7,7 @@ let cp = new Vue({
 		img:"http://pic.gomaji.com/products/588/160588/160588_4_r.jpg?1501638246"
 	}
 })
+
+
+
+
