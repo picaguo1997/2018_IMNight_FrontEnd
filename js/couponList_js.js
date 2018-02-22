@@ -2,57 +2,7 @@ var resource = new Vue({
 	el:'.main',
 	data:{
 		checked:false,
-		coupons:[
-		{
-			num:1,
-			name:'披薩集點卡',
-			shop:'SoFree柴燒披薩',
-			detail:'可兌換免費披薩一張',
-			time:'即日起至5/8前',
-			usable:true,
-			imgUrl:'../img/sofree.jpg',
-		},{
-			num:2,
-			name:'TIME立解班',
-			shop:'OKE美語',
-			detail:'免費試聽TIME立解課程一堂',
-			time:'5/8至6月底',
-			usable:false,
-			imgUrl:'../img/okeLogo.jpg',
-		},{
-			num:3,
-			name:'單字文法書',
-			shop:'OKE美語',
-			detail:'免費單字文法書一本',
-			time:'5/8至6月底',
-			usable:false,
-			imgUrl:'../img/okeLogo.jpg',
-		},{
-			num:4,
-			name:'免費披薩一張',
-			shop:'SoFree柴燒披薩',
-			detail:'免費單字文法書一本',
-			time:'即日起至5/8前',
-			usable:true,
-			imgUrl:'../img/sofree.jpg',
-		},{
-			num:5,
-			name:'免費披薩一張',
-			shop:'SoFree柴燒披薩',
-			detail:'免費單字文法書一本',
-			time:'即日起至5/8前',
-			usable:false,
-			imgUrl:'../img/sofree.jpg',
-		},{
-			num:6,
-			name:'免費披薩一張',
-			shop:'SoFree柴燒披薩',
-			detail:'免費單字文法書一本',
-			time:'即日起至5/8前',
-			usable:true,
-			imgUrl:'../img/sofree.jpg',
-		},
-		]
+		coupons:[],
 	},
 	methods:{
 		delayShow:function(k){
@@ -70,5 +20,20 @@ var resource = new Vue({
 			this.dcheck(k);
 		}
 	}
-})
+});
+
+$(function(){
+	$.ajax({
+		url: 'http://127.0.0.1:8887/js/coupon.json',
+		type: 'GET',
+		success:function(data){
+			for(var i = 0;i < data.length; i++){
+				resource.coupons.push(data[i]);
+			}
+		},
+		error: function(data) {
+			alert("fail"+typeof(data));
+		}
+	});
+});
 

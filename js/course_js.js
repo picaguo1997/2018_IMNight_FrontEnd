@@ -1,39 +1,7 @@
-
-
 var resource = new Vue({
 	el:'.main',
 	data:{
-		classes:[
-			{
-				num:1,
-				name:'程式設計',
-				teacher:'小傑',
-				more:"大一必修",
-				imgUrl:'https://datasciencebe.files.wordpress.com/2015/01/coursera.png',
-				Info:"想當初就是這樣一路辛苦學會程式的啊！但現在回頭一看，一切都是值得的！",
-			},{
-				num:2,
-				name:'資料結構',
-				teacher:'坤叔',
-				more:"考古課",
-				imgUrl:'../img/bgRed.jpg',
-				Info:"blablabla",
-			},{
-				num:3,
-				name:'統計',
-				teacher:'小阿姨',
-				more:"很重",
-				imgUrl:'../img/bgRed.jpg',
-				Info:"to be continue",
-			},{
-				num:4,
-				name:'網路',
-				teacher:'松哥',
-				more:"大三必修",
-				imgUrl:'../img/bgRed.jpg',
-				Info:"to be continue",
-			}
-		]
+		classes:[],
 	},
 	methods: {
 		move: function(k) {
@@ -63,3 +31,17 @@ var resource = new Vue({
 	}
 });
 
+$(function(){
+	$.ajax({
+		url: 'http://127.0.0.1:8887/js/course.json',
+		type: 'GET',
+		success:function(data){
+			for(var i = 0;i < data.length; i++){
+				resource.classes.push(data[i]);
+			}
+		},
+		error: function(data) {
+			alert("fail"+data);
+		}
+	});
+});
