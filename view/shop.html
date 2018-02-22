@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
+		<title>合作商家</title>
+		<!-- custom css-->
+		<link href="../css/shop_assist.css" rel="stylesheet">
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id = "mainContext">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="titles">合作商家</h1>
+					<h6 class="subtitles">感謝商家們的熱情贊助</h6>
+				</div>
+			</div>
+			
+			<div class="row content">
+				<div class = "col-4" id = "laptop">
+					<div class="list-group" id="list-tab" role="tablist">
+						<a v-for = "e in shops" @click ="changeCss(e.num)" class="list-group-item" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
+							<div class = "leftImg" >
+								<img class="img-circle" :src = "e.logo" :id = "'Img-'+e.num">
+							</div>
+							<div class = "description" :id = "'Des-'+e.num">
+								<h3 :id = "'DesNa-'+e.num" class = "DesNa">{{e.name}}</h3>
+								<p :id = "'DesDe-'+e.num" class = "DesDe">{{e.detail}}</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<div class = "col-3" id = "mobile">
+					<div class="list-group" id="list-tab" role="tablist">
+						<a v-for = "e in shops" class="list-group-item" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
+							<div class = "description hidescript" :id = "'des-'+e.num" v-on:click = "swap(e.num)">
+								<h5><b>{{e.name}}</b></h5>
+								<h6>{{e.detail}}</h6>
+							</div>
+							<div class = "leftImg" >
+								<img class="img-circle" :src = "e.logo" :id = "'img-'+e.num" v-on:click = "swap(e.num)">
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<div class = "col-8" id = "detail">
+					<div class="tab-content" id="nav-tabContent">
+						<div v-for = "e in shops" class = "tab-pane fade context" :id = "'right'+e.num" role="tabpanel" :aria-labelledby="'list-'+e.num">
+							<center>
+								<p v-html = "e.info" class = "word"></p>
+								<a :href = "e.fbPage" target="_blank" ><img :src = "e.logo" class = "rightImg"></a>
+							</center>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			
+		
+		</div>
+		
+		<!--link for jquery and bootstrap-->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- custom js -->
+		<script src="../js/shop_js.js"></script>
+	</body>
+</html>

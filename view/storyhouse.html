@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
+		<title>IM 故事館</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- custom CSS-->
+	    <link href="../css/storyhouse.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id = "mainContext">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<!-- <div class="titles"> -->
+						<h1 class="titles">IM 故事館</h1>
+					<!-- </div> -->
+						<h6 class="subtitles">收藏著人們的故事</h6>
+				</div>
+			</div>
+			
+			<!-- story in each card-->
+			<div class = "story">
+				<div class = "row">
+					<div class = "cardInRow" v-for = "e in stories" >
+						<div class = "card box-shadow" data-toggle="modal" :data-target="'#modal'+e.num" :style="{ backgroundImage: 'url(' + e.imgUrl + ')' }">
+							<img class="card-img" :src = "e.imgUrl" alt="Card image">
+						</div>
+						
+						<div class = "triangle">
+						</div>
+						<div class = "tag">
+							<h4 class="card-title"><b>{{e.title}}</b></h4>
+							<h6 class="card-subtitle">{{e.detail}}</h6>
+						</div>
+					</div>
+				</div>	
+				
+				<!-- modal -->
+				<div v-for = "e in stories">
+					<div class="modal fade" :id = "'modal'+e.num" tabindex="-1" role="dialog">
+						<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title">{{e.title}}</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p v-html = "e.info"></p>
+									<center v-on:click= "crack(e.num)">
+										<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" >
+										<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
+										<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
+									</center>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- link for jquery and bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- custom js -->
+		<script src = "../js/storyhouse.js"></script>
+		
+	</body>
+</html>

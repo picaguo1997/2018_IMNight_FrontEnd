@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"></meta>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
+		<title>課程與學習資源</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- custom CSS-->
+	    <link href="../css/course_assist.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id = "mainContext">
+			<div class = "titles">
+				<div class="container">
+					<h1><b>課程與學習資源</b></h1>
+				</div>
+			</div>
+			
+			<div class = "main">
+				<div class = "row">
+					<div class = "space" v-for = "e in classes" >
+						<!--front-->
+						<div class = "card" v-bind="{id: 'card'+e.num}" v-on:click = "move(e.num)">
+							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
+							<div class = "card-body">
+								<h4 class="card-title">{{e.name}}</h4>
+								<h6 class="card-subtitle mb-2 text-success">{{e.teacher}}</h6>
+							</div>
+						</div>
+						
+						<!--back-->
+						<div class = "box transform" v-bind="{id: 'back'+e.num}">
+							<h5>{{e.more}}
+								<span><img class = "moreBtn" data-toggle="modal" :data-target="'#exampleModal'+e.num" src = "../img/play-button.png"></span>
+							</h5>
+						</div>
+					</div>
+				</div>
+				
+				<!--modal-->
+				<div class="modal fade" v-for = "e in classes" v-bind = "{id: 'exampleModal'+e.num}" tabindex="-1" role="dialog">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">{{e.name}}</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<center>
+								<div class="modal-body">
+									<img :src="e.imgUrl" class = "logo">
+									<p class = "textBreak">{{e.Info}}</p>
+									<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" v-on:click= "crack(e.num)">
+									<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
+									<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
+								</div>
+							</center>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+
+		<!-- link for jquery and bootstrap -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		
+		<!-- custom js -->
+		<script src = "../js/course_js.js"></script>
+		
+	</body>
+</html>

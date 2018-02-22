@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- my css -->
+  <link rel="stylesheet" type="text/css" href="../css/menuPage.css">
+  <!-- for fontawesome -->
+  <!-- <script src="../js/fontawesome-all.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap-social.css">
+
+  <title>2018 IM Night!</title>
+</head>
+
+<body>
+  <!-- 主頁部分 -->
+  <div class="container-fluid" id="menuPage">
+    <div class="bgRed">
+
+      <div class="row justify-content-center pt-5 pb-4 no-marg">
+        <div class="col-10" style="opacity: 0.7">
+          <h1 class="text-center jh">遊戲規則</h1>
+          <h5 class="text-center jh text-muted">原則很簡單，累積點數抽大獎</h5>
+        </div>
+      </div>
+
+      <div class="row justify-content-center no-marg">
+          <div class="col-8 col-md-4 col-xl-2 my-3">
+            <div class="card text-center rule-card">
+              <div class="card-body">
+                <h4 class="card-title jh">累積點數方式</h4>
+                <h6 class="jh text-muted lh">閱讀每日文章<br>領取每日優惠券<br>抽每日資管人<br>以及額外的任務</h6>      
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-md-4 col-xl-2 my-3">
+            <div class="card text-center rule-card">
+              <div class="card-body">
+                <h4 class="card-title jh">獎品</h4>          
+                <h6 class="jh text-muted lh">之夜當天依照累積點數，以一點為一張摸彩券的形式，玩家爭取越多點數來下注在想要的獎品上。<br>不定期活動抽獎<br>可每日領取好康優惠券</h6>      
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row justify-content-center my-4 no-marg">
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/people.png" alt="人緣" class="img-fluid"></div>
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/sky.png" alt="天緣" class="img-fluid"></div>
+        <div class="col-6 col-md-3 col-xl-2"><img src="../img/land.png" alt="地緣" class="img-fluid"></div>
+      </div>
+
+      <!-- for log in modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="false" v-if="!loggedIn">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title jh" id="loginModalLabel">提醒</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body jh" id="login-text">
+              您還沒登入喔，快來FB登入！
+            </div>
+            <div class="modal-footer">
+              <a class="btn btn-block btn-social btn-facebook" style="color: white" href="template.html">
+                <span class="fa fa-facebook" style="top: 3px"></span> Sign in with Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- for remind modal -->
+      <div class="modal fade" id="remindModal" tabindex="-1" role="dialog" aria-labelledby="remindModalLabel" aria-hidden="false" v-if="loggedIn">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title jh" id="remindModalLabel">提醒</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div v-if="!(drawnCard&takenDiscount)" class="modal-body jh pb-0">
+              <h5 class="jh">
+                您今日尚未 <a v-if="!drawnCard" id="draw-card" data-toggle="tooltip" title="抽卡！">抽卡</a> 
+                <p v-if="!(drawnCard|takenDiscount)" style="display: inline-block;">及</p>
+                <a v-if="!takenDiscount" id="draw-discount" data-toggle="tooltip" title="抽優惠！">領取每日優惠</a>
+              </h5>
+              <hr>
+            </div>
+
+            <div class="modal-body pt-3">
+              <h5 class="jh">最新消息</h5>
+              <div class="row justify-content-center">
+                <div class="col-10 col-sm-8">
+                  <ol class="text-muted">
+                    <li class="pl-3">This is a list item</li>
+                    <li class="pl-3">Another list item</li>
+                    <li class="pl-3">3</li>
+                    <li class="pl-3">4</li>
+                    <li class="pl-3">5</li>
+                  </ol>
+                </div>
+              </div>  
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- 主頁部分結束 -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- for vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" ></script>
+
+  <!-- my js -->
+  <script src="../js/menuPage.js"></script>
+</body>
+
+</html>
