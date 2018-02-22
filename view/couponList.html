@@ -85,7 +85,7 @@
 													<b>使用期限:</b><br />
 													{{e.time}}<br />
 													<br />
-													<a href="shop.html"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
+													<a onclick="link('shop')"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
 													<button v-if = "e.usable" class = "btn btn-outline-secondary" @click = "delayShow(e.num)">我要使用</button>
 												</center>
 											</div>
