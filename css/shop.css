@@ -79,7 +79,7 @@
 	}
 	.list-group-item:hover{
 		height:120px;
-		/* background-color:rgba(0,0,0,0.9) !important; */
+		background-color:rgba(0,0,0,0.9) !important;
 	}
 	.list-group-item{
 		height:100px;
