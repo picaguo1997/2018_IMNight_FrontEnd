@@ -1,13 +1,3 @@
-/* 滿版 */
-/* html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-} */
-
-/* 非滿版 */
 html {
 	height: 90%;
 }
@@ -53,19 +43,16 @@ body {
 .btn-row {
 	margin-right: 0;
 	margin-left: 0;
-
-	/* 滿版 */
-	/* padding-top: 80vh; */
-
-	/* 非滿版 */
-	/* top: 65vh; */
-
-	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
-	opacity: 0.95;
 }
 
 #start {
 	display: none;
+	opacity: 0.7;
+}
+
+#btn-text {
+	font-family: "Microsoft YaHei", "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+	font-weight: 600 !important;
 }
 
 #sky-land-bg {
@@ -108,16 +95,13 @@ body {
 @media screen and (min-width: 0px) and (max-width: 600px) {
 	#home-word {
 		background-size: 250% 80%;
-
 		/* 非滿版 */
 		background-position: center -10vh;
 	}
+	#btn-text {
+		font-size: 2.2vh;
+	}
 	#but-space {
-		/* 滿版 */
-		/* padding-top: 75vh; */
-
-		/* 非滿版 */
-		/* padding-top: 55vh; */
 		top: 55vh;
 	}
 	#concept-space {
@@ -132,4 +116,50 @@ body {
 	body {
 		height: 85%;
 	}
+}
+
+/* Bounce To Right */
+.hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+
+  border: 0;
+}
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  /* color: #8e00f2; */
+  color: white;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
