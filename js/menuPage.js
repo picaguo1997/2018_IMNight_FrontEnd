@@ -3,16 +3,6 @@ let cardDrawn = false;
 let discountTaken = false;
 
 $(function(){
-	//post for log in
-	// $.ajax({
-	// 	type: 'POST',
-	// 	url: 'http://140.112.106.45:8000/accounts/login/',
-	// 	data: {"password":"testimnight","username":"test123"},
-	// 	success:function(data) {
-	// 		console.log(data);
-	// 	}
-	// })
-
 	// check if the user has logged in
 	$.ajax({
 		type: 'GET',
