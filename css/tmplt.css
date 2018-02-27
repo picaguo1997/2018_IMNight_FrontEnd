@@ -2,7 +2,7 @@
 	min-height:calc(100vh - 56px);
 	padding-top:5rem;
 	position:relative;
-
+	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
 }
 
 .content-wrapper:before{
@@ -14,7 +14,7 @@
 	top:0px;
 	background-image:url(../img/KV_OP.jpg);
 	background-repeat:no-repeat;
-	background-position:center;
+	background-position:center center;
 	background-attachment: fixed;
 	background-size: contain;
 	z-index: -1;
@@ -30,6 +30,10 @@ nav{
 	animation: slidein-left 2.0s;
 }
 
+#mainNav{
+	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
+}
+
 #mainNav .navbar-collapse{
 	overflow:auto;
 	max-height:75vh
@@ -40,7 +44,7 @@ nav{
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after{
 	float:right;
 	content:'\f107';
-	font-family:FontAwesome, "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
+	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
 	/* text-rendering: optimizeLegibility; */
 }
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after{
