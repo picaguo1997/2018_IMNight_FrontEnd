@@ -3,18 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1, maximum-scale = 1" />
-
-	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 	
 	<!--fontAwesome-->
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<!-- <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet"> -->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap-social.css">
+
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
-	
-	<script src="../js/vue.min.js"></script>
 
 	<link rel="stylesheet" href="../css/tmplt.css">
 	<title>Template</title>
@@ -22,17 +18,18 @@
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
-	    <a class="navbar-brand" onclick="loadPage('remindPage')">2018 IM Night</a>
+	    <div class="navbar-brand jh" id="nav-btn" onclick="loadPage('menuPage')">2018 IM Night</div>
 	    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 
 	    <div class="collapse navbar-collapse" id="navbarResponsive">
-	      	<ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+	      	<ul class="navbar-nav navbar-sidenav jh" id="exampleAccordion">
 		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Sky">
 		            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseSky" data-parent="#exampleAccordion">
 			            <i class="fa fa-fw fa-wrench"></i>
 			            <span class="nav-link-text">天緣</span>
+			            <i class="fa fa-fw fa-angle-down float-right mt-1"></i>
 		          	</a>
 		          	<ul class="sidenav-second-level collapse" id="collapseSky">
 			            <li>
@@ -45,6 +42,7 @@
 		            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseLand" data-parent="#exampleAccordion">
 			            <i class="fa fa-fw fa-wrench"></i>
 			            <span class="nav-link-text">地緣</span>
+			            <i class="fa fa-fw fa-angle-down float-right mt-1"></i>
 		          	</a>
 		          	<ul class="sidenav-second-level collapse" id="collapseLand">
 			            <li>
@@ -60,6 +58,7 @@
 		            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePeople" data-parent="#exampleAccordion">
 			            <i class="fa fa-fw fa-wrench"></i>
 			            <span class="nav-link-text">人緣</span>
+			            <i class="fa fa-fw fa-angle-down float-right mt-1"></i>
 		          	</a>
 		          	<ul class="sidenav-second-level collapse" id="collapsePeople">
 			            <li>
@@ -75,7 +74,7 @@
 		        </li>
 	      	</ul>
 
-	     	<ul class="navbar-nav ml-auto">
+	     	<ul class="navbar-nav ml-auto jh">
 	        	<li class="nav-item" style="margin-right:100px;">
 		          	<span class="navbar-text">
 		          		您尚未登入
@@ -107,8 +106,17 @@
 		</div>
 	</div>
 	
+	<!-- for jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+ 	<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+	<!-- for bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+	<!-- for ../js scripts -->
+	<script src="../js/vue.min.js"></script>
+	<script src="../js/fontawesome-all.js"></script>
 	<script src="../js/tmplt.js"></script>
-
 
 </body>
 </html>

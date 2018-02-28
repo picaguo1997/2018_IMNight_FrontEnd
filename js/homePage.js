@@ -42,3 +42,18 @@ function(){
 function(){
 	$(this).removeClass('transition');
 });
+
+// for smartphone click hover effect
+$('#start').on('click', function() {
+    if ($(window).width() <= 600) {
+        setTimeout(function(){
+            location.href = "template.html";
+        }, 500); 
+    }
+    else {
+        setTimeout(function(){
+            location.href = "template.html";
+        }, 500);
+    }
+});    
+

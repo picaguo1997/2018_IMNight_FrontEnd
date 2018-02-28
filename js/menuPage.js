@@ -1,6 +1,6 @@
-let login = true;
-let cardDrawn = false;
-let discountTaken = false;
+var login = true;
+var cardDrawn = false;
+var discountTaken = false;
 
 $(function(){
 	// check if the user has logged in
@@ -41,7 +41,7 @@ $(function(){
 
 })
 
-let login_modal = new Vue({
+var login_modal = new Vue({
 	el: '#loginModal',
 	data: {
 		message: '',
@@ -49,7 +49,7 @@ let login_modal = new Vue({
 	}
 })
 
-let remind_modal = new Vue({
+var remind_modal = new Vue({
 	el: '#remindModal',
 	data: {
 		message: '',
@@ -60,10 +60,8 @@ let remind_modal = new Vue({
 })
 
 if (login) {
+	$('#loginModal').remove();
 	$('#remindModal').modal('toggle');
-}
-else {
-	// $('#loginModal').modal('toggle');
 
 	// get news info using ajax
 	$.ajax({
@@ -81,7 +79,9 @@ else {
 			}
 		}
 	});
-
+}
+else {
+	$('#remindModal').remove();
 	$('#loginModal').modal('toggle');
 }
 

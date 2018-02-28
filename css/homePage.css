@@ -1,9 +1,9 @@
 html {
-	height: 90%;
+	height: 100%;
 }
 
 body {
-	height: 90%;
+	height: 100%;
 }
 
 #home-bg {
@@ -21,9 +21,9 @@ body {
 	background-size: cover;
 
 	/* 滿版 */
-	/* background-position: center center; */
+	background-position: center -10vh;
 	/* 非滿版 */
-	background-position: center -15vh;
+	/* background-position: center -15vh; */
 
 	padding: 0;
 	height: 100%;
@@ -37,7 +37,7 @@ body {
 
 #but-space {
 	position: absolute;
-	top: 65vh;
+	top: 75vh;
 }
 
 .btn-row {
@@ -96,26 +96,26 @@ body {
 	#home-word {
 		background-size: 250% 80%;
 		/* 非滿版 */
-		background-position: center -10vh;
+		background-position: center -5vh;
 	}
 	#btn-text {
 		font-size: 2.2vh;
 	}
 	#but-space {
-		top: 55vh;
+		top: 70vh;
 	}
 	#concept-space {
 		margin-top: 0vh;
 	}
 
 	/* 非滿版 */
-	html {
+/* 	html {
 		height: 85%;
 	}
 
 	body {
 		height: 85%;
-	}
+	} */
 }
 
 /* Bounce To Right */
