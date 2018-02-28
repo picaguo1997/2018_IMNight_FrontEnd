@@ -19,12 +19,8 @@
 		<div id = "mainContext">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<!-- <div class = "titles"> -->
-						<!-- <div class="container"> -->
-							<h1 class="titles">優惠券們</h1>
-							<h6 class="subtitles"></h6>
-						<!-- </div> -->
-					<!-- </div> -->
+					<h1 class="titles">優惠券們</h1>
+					<h6 class="subtitles"></h6>
 				</div>
 			</div>
 			
@@ -32,7 +28,7 @@
 			<!--control panal-->
 			<div class = "main">			
 				<!-- switch -->
-				<nav class="navbar sticky-top navbar-light">
+				<nav class="navbar navbar-light">
 					<div class = "switchItem" >
 						<p>只顯示可使用之優惠券
 							<span>
@@ -52,7 +48,7 @@
 							<img class = "card-img-top" :src = "e.imgUrl">
 							
 							<div class = "card-body">
-								<h4 class="card-title">{{e.name}}<span v-if = "e.usable" class = "buyIcon"><i class="fas fa-shopping-cart"></i></span></h4>
+								<h4 class="card-title">{{e.name}}<span v-if = "e.usable" class = "buyIcon"><img src = "../img/cart.png"></span></h4>
 								<h6 class="card-subtitle mb-2 text-success">{{e.shop}}</h6>
 								
 							</div>
@@ -87,8 +83,8 @@
 													<b>使用期限:</b><br />
 													{{e.time}}<br />
 													<br />
-													<a onclick="link('shop')"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
-													<button v-if = "e.usable" class = "btn btn-outline-secondary" @click = "delayShow(e.num)">我要使用</button>
+													<a onclick="link('shop')" class="hvr-underline-from-right">商家列表</a>
+													<a v-if = "e.usable" class="hvr-underline-from-right" @click = "delayShow(e.num)">我要使用</a>
 												</center>
 											</div>
 										</div>
@@ -98,8 +94,8 @@
 										<center>
 											<h4><b>確定要使用嗎?</b></h4>
 											<p>按錯就掰掰了喔QAQ</p>
-											<button class = "btn btn-secondary" @click = "dcheck(e.num)">取消</button>
-											<button class = "btn btn-secondary" @click = "submit(e.num)">確認</button>
+											<a class = "hvr-bubble-float-top" @click = "dcheck(e.num)">取消</a>
+											<a class = "hvr-bubble-float-top" @click = "submit(e.num)">確認</a>
 										</center>
 									</div>	
 									
