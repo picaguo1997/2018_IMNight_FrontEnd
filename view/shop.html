@@ -23,7 +23,7 @@
 			<div class="row content">
 				<div class = "col-4" id = "laptop">
 					<div class="list-group" id="list-tab" role="tablist">
-						<a v-for = "e in shops" @click ="changeCss(e.num)" class="list-group-item" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
+						<a v-for = "e in shops" @click ="changeCss(e.num)" class="list-group-item hvr-sweep-to-right" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
 							<div class = "leftImg" >
 								<img class="img-circle" :src = "e.logo" :id = "'Img-'+e.num">
 							</div>
@@ -37,7 +37,7 @@
 				
 				<div class = "col-3" id = "mobile">
 					<div class="list-group" id="list-tab" role="tablist">
-						<a v-for = "e in shops" class="list-group-item" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
+						<a v-for = "e in shops" class="list-group-item hvr-sweep-to-right" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
 							<div class = "description hidescript" :id = "'des-'+e.num" v-on:click = "swap(e.num)">
 								<h5><b>{{e.name}}</b></h5>
 								<h6>{{e.detail}}</h6>
