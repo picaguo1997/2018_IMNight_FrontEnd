@@ -43,9 +43,11 @@ var resource = new Vue({
 				if(i == Number(k)){
 					$('#card'+k).toggleClass('lift');
 					$('#back'+k).toggleClass('transform-active');
+					$('#cb'+k).toggleClass('moveRight');
 				}else{
 					$('#card'+String(i)).removeClass('lift');
 					$('#back'+String(i)).removeClass('transform-active');
+					$('#cb'+String(i)).removeClass('moveRight');
 				}
 			}		
 		},
