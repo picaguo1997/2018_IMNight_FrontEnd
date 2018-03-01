@@ -15,6 +15,14 @@
 	.box{
 		margin-left:30px;
 	}
+	
+	.cb{
+		position:relative;
+		left:-5px;
+	}
+	.moveRight{
+		transform:translateX(200px);
+	}
 }
 
 /*laptop*/
@@ -22,12 +30,16 @@
 	.card{
 		margin:10px;
 	}
+	.moveRight{
+		transform:translateX(180px);
+	}
 }
 
 .titles{
 	/* background-color:#E0E0E0; */
 	padding-bottom:3%;
 	padding-top:3%;
+	z-index:1;
 }
 
 .container{
@@ -38,9 +50,38 @@
 
 .card{
 	margin-bottom:15px;
-	max-width:300px;
+	width:300px;
 	transition:all 1s;
+	z-index:1;
+	border:transparent;
+}
+
+.cit{
+	border-top-left-radius:3%;
+	border-top-right-radius:3%;
+	background-size:cover;
+	background-position:center center;
+	height:280px !important;
+}
+
+.cb{
+	clip-path: polygon(100% 0%, 82% 50%, 100% 100%, 0 100%, 0 49%, 0 0);
+	position:relative;
+	top:-90px;
+	background-color: #c4e1ff;
+	width:130px;
+	padding:5px;
+	text-align:left;
 	z-index:2;
+	transition:all 1.5s;
+}
+
+.cb .card-title{
+	color:white;
+}
+
+.card:hover{
+	cursor:pointer;
 }
 
 .box {
@@ -71,14 +112,14 @@
 }
 
 .transform-active {
-  background-color: #45CEE0;
-  height:120px;
+  background-color: rgba(255,181,181,0.9);
+  height:70px;
   width: 250px;
-  z-index:1;
+  z-index:0;
 }
   
 .lift{
-	transform:rotate(3deg) translateY(-30%);
+	transform:rotate(3deg) translateY(-20%);
 }
 
 .row{
@@ -89,14 +130,17 @@
 	justify-content: center;
 }
 
-
 .modal-content{
 	background: linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)), url("../img/bgRed.jpg") no-repeat center center;
 }
 
-
 .moreBtn{
 	animation:blink 2s infinite;
+}
+
+.moreBtn:hover{
+	cursor:pointer;
+	transform:scale(1.1);
 }
 
 @keyframes blink{
