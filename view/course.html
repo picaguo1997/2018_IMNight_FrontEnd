@@ -9,7 +9,7 @@
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		
 		<!-- custom CSS-->
-	    <link href="../css/course_assist.css" rel="stylesheet">
+	    <link href="../css/course.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -25,12 +25,14 @@
 					<div class = "space" v-for = "e in classes" >
 						<!--front-->
 						<div class = "card" v-bind="{id: 'card'+e.num}" v-on:click = "move(e.num)">
-							<img class = "card-img-top" src = "http://littlemissbento.com/wp-content/uploads/2015/10/sumikkogurashi-1024x576.png" alt = "card-img-top">
-							<div class = "card-body">
-								<h4 class="card-title">{{e.name}}</h4>
-								<h6 class="card-subtitle mb-2 text-success">{{e.teacher}}</h6>
+							<div class = "cit" :style="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }">
 							</div>
 						</div>
+						<div class = "cb" :id = "'cb'+e.num">
+							<h4 class="card-title"><b>{{e.name}}</b></h4>
+							<h6 class="card-subtitle mb-2"><span><img src = "../img/manager.png"></span>{{e.teacher}}</h6>
+						</div>
+						
 						
 						<!--back-->
 						<div class = "box transform" v-bind="{id: 'back'+e.num}">
@@ -78,7 +80,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 		
 		<!-- custom js -->
-		<script src = "../js/course_js.js"></script>
+		<script src = "../js/course.js"></script>
 		
 	</body>
 </html>
