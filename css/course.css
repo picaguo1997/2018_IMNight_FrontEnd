@@ -89,7 +89,7 @@
 	height: 0px;
 	width: 0px;
 	position:relative;
-	top:-160px;
+	top:-170px;
 	left:10px;
 	display:flex;
 	padding-left:10px;
@@ -113,7 +113,7 @@
 
 .transform-active {
   background-color: rgba(255,181,181,0.9);
-  height:80px;
+  height:90px;
   width: 250px;
   z-index:0;
 }
