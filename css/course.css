@@ -18,7 +18,7 @@
 	
 	.cb{
 		position:relative;
-		left:-5px;
+		left:10px;
 	}
 	.moveRight{
 		transform:translateX(200px);
@@ -89,7 +89,7 @@
 	height: 0px;
 	width: 0px;
 	position:relative;
-	top:-150px;
+	top:-160px;
 	left:10px;
 	display:flex;
 	padding-left:10px;
@@ -113,7 +113,7 @@
 
 .transform-active {
   background-color: rgba(255,181,181,0.9);
-  height:70px;
+  height:80px;
   width: 250px;
   z-index:0;
 }
