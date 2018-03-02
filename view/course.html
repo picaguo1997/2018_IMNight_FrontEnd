@@ -25,7 +25,7 @@
 					<div class = "space" v-for = "e in classes" >
 						<!--front-->
 						<div class = "card" v-bind="{id: 'card'+e.num}" v-on:click = "move(e.num)">
-							<div class = "cit" :style="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }">
+							<div class = "cit hvr-curl-top-right" :style="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }">
 							</div>
 						</div>
 						<div class = "cb" :id = "'cb'+e.num">
