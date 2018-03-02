@@ -68,6 +68,11 @@ var resource = new Vue({
 		submit:function(k){
 			this.coupons[k-1].usable = false;
 			this.dcheck(k);
+		},
+		grow: function(k) {
+			k = String(k);
+			$('#orb'+k).toggleClass('showUp');
+			$('#star'+k).toggleClass('moveV');
 		}
 	}
 })
