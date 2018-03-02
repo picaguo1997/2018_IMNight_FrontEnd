@@ -72,7 +72,14 @@ var resource = new Vue({
 		grow: function(k) {
 			k = String(k);
 			$('#orb'+k).toggleClass('showUp');
-			$('#star'+k).toggleClass('moveV');
+			$('#star'+k).toggleClass('rainbow');
+			if($('#star'+k).hasClass('moveV')){
+				$('#star'+k).addClass('moveback');
+				$('#star'+k).removeClass('moveV');
+			}else{
+				$('#star'+k).removeClass('moveback');
+				$('#star'+k).addClass('moveV');
+			}
 		}
 	}
 })
