@@ -35,6 +35,41 @@
 			transform:scale(1);
 		}
 	}
+	
+	.description{
+		position:relative;
+		left:-20px;
+	}
+	
+	.star{
+		position:relative;
+		top:140px;
+		left:-20px;
+	}
+	
+	.moveV{
+		animation:VshapeMovement 1.2s linear;
+		position:relative;
+		top:100px;
+		left:250px;
+	}
+
+	@keyframes VshapeMovement{
+		0%{
+			position:relative;
+			top:140px;
+			left:-20px;
+		}50%{
+			position:relative;
+			top:260px;
+			left:180px;
+		}100%{
+			position:relative;
+			top:100px;
+			left:250px;
+		}
+	}
+	
 }
 
 /*laptop*/
@@ -50,23 +85,51 @@
 	}
 	
 	.buyIcon{
-	transform: scaleX(-1);
-	float:right;
-	animation:move 3s infinite;
-}
+		transform: scaleX(-1);
+		float:right;
+		animation:move 3s infinite;
+	}
 
-@keyframes move{
-	0%{
-		opacity:0;
-		position:relative;
-		right:0%;
+	@keyframes move{
+		0%{
+			opacity:0;
+			position:relative;
+			right:0%;
+		}
+		100%{
+			opacity:1;
+			position:relative;
+			right:22%;
+		}
 	}
-	100%{
-		opacity:1;
+	
+	.star{
 		position:relative;
-		right:22%;
+		top:140px;
+		left:-10px;
 	}
-}
+	.moveV{
+		animation:VshapeMovement 1.2s linear;
+		position:relative;
+		top:100px;
+		left:250px;
+	}
+
+	@keyframes VshapeMovement{
+		0%{
+			position:relative;
+			top:140px;
+			left:-10px;
+		}50%{
+			position:relative;
+			top:260px;
+			left:180px;
+		}100%{
+			position:relative;
+			top:100px;
+			left:250px;
+		}
+	}
 }
 
 /*title*/
@@ -84,21 +147,6 @@
 	align-items: center; /* align vertical*/
 }
 
-.card{
-	margin-bottom:15px;
-	max-width:300px;
-	transition:all 1s;
-}
-
-.card:hover{
-	transform:scale(1.1);
-	background-color:rgba(255,250,205,0.9);
-	border-width:3px;
-	border-color:rgba(255,246,143,0.9);
-}
-
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
-
 .row{
 	padding-left:2%;
 	padding-top:2%;
@@ -107,6 +155,72 @@
 	justify-content: center;
 	transition:all 1s;
 }
+.cardInRow{
+	max-height:320px;
+}
+
+.card{
+	cursor:pointer;
+	border-radius:3%;
+	position:relative;
+	top:-270px;
+	margin-bottom:15px;
+	width:300px;
+	transition:all 1s;
+}
+
+.cit{
+	border-radius:3%;
+	background-color:transparent;
+	background-size:cover;
+	background-position:center center;
+	height:300px !important;
+}
+
+.orbitLine{
+	clip-path: circle(0% at 10% 100%);
+	height:200px;
+	transition: all 1.2s;
+}
+
+.orbitLine h3,h5{
+	text-align:left;
+	position:relative;
+	top:120px;
+}
+
+.showUp{
+	clip-path: circle(60% at 25% 100%);
+	height:200px;
+}
+
+.description{
+	z-index:3;
+	padding:5px;
+	background-color: rgba(220,181,255,0.9);
+	position:relative;
+	top:50px;
+}
+
+.star{
+	cursor:pointer;
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+	background-color:yellow;
+	opacity:0.8;
+	height:80px;
+	width:80px;
+	z-index:2;
+}
+
+.star:hover{
+	transform:scale(1.1);
+	background-color:rgba(255,250,205,0.9);
+	border-width:3px;
+	border-color:rgba(255,246,143,0.9);
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 /* The switch - the box around the slider */
 .switch {
@@ -188,6 +302,11 @@ input:checked + .slider:before {
 	background: url("../img/bg.jpg") no-repeat left center;
 	height: 100%;
 	transition:all 1s;
+}
+
+.modal-title{
+	position: relative;
+	top:0px;
 }
 
 .changeBg{
