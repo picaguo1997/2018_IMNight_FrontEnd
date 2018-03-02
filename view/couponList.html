@@ -8,27 +8,24 @@
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+		
 		<!-- custom css -->
-		<link href="../css/couponList.css" rel="stylesheet">
+		<link href="../css/couponList_assist.css" rel="stylesheet">
 		
 	</head>
 	
 	<body>
 		<div id = "mainContext">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<h1 class="titles"><b>優惠券們</b></h1>
-					<h6 class="subtitles"></h6>
+			<div class = "titles">
+				<div class="container">
+					<h1><b>優惠券們</b></h1>
 				</div>
 			</div>
-			
 			
 			<!--control panal-->
 			<div class = "main">			
 				<!-- switch -->
-				<nav class="navbar navbar-light">
+				<nav class="navbar sticky-top navbar-light">
 					<div class = "switchItem" >
 						<p>只顯示可使用之優惠券
 							<span>
@@ -43,15 +40,13 @@
 				
 				<!--couponList start-->
 				<div class="row">
-					<div class = "cardInRow" v-for = "e in coupons" v-if = "!checked || e.usable">
-						<div class = "star" :id = "'star'+e.num" v-on:click = "grow(e.num)">
-						</div>
-						<div class = "description orbitLine" :id = "'orb'+e.num">
-							<h5>{{e.shop}}</h5>
-							<h3><b>{{e.name}}</b></h3>
-						</div>
-						<div class = "card box-shadow" :id = "'coupen'+e.num"  data-toggle="modal" :data-target="'#modal'+e.num">
-							<div class = "cit" :style="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }">
+					<div class = "cardInRow" v-for = "e in coupons">
+						<div class = "card box-shadow" :id = "'coupen'+e.num" v-if = "!checked || e.usable" data-toggle="modal" :data-target="'#modal'+e.num">
+							<img class = "card-img-top" :src = "e.imgUrl">
+							
+							<div class = "card-body">
+								<h4 class="card-title">{{e.name}}</h4>
+								<h6 class="card-subtitle mb-2 text-success">{{e.shop}}</h6>
 							</div>
 						</div>
 					</div>
@@ -60,7 +55,7 @@
 				<!-- pop out modal Start-->
 				<div v-for = "e in coupons">
 					<div class="modal fade" :id = "'modal'+e.num" tabindex="-1" role="dialog">
-						<div class="modal-dialog " role="document">
+						<div class="modal-dialog" role="document">
 							<div class="modal-content" :id = "'modal-content'+e.num">
 								<div class="modal-header">
 									<h5 class="modal-title">{{e.name}}</h5>
@@ -84,8 +79,8 @@
 													<b>使用期限:</b><br />
 													{{e.time}}<br />
 													<br />
-													<a onclick="link('shop')" class="hvr-underline-from-right">商家列表</a>
-													<a v-if = "e.usable" class="hvr-underline-from-right" @click = "delayShow(e.num)">我要使用</a>
+													<a href="shop.html"><button type = "button" class = "btn btn-outline-secondary">商家列表</button></a>
+													<button v-if = "e.usable" class = "btn btn-outline-secondary" @click = "delayShow(e.num)">我要使用</button>
 												</center>
 											</div>
 										</div>
@@ -95,8 +90,8 @@
 										<center>
 											<h4><b>確定要使用嗎?</b></h4>
 											<p>按錯就掰掰了喔QAQ</p>
-											<a class = "hvr-bubble-float-top" @click = "dcheck(e.num)">取消</a>
-											<a class = "hvr-bubble-float-top" @click = "submit(e.num)">確認</a>
+											<button class = "btn btn-secondary" @click = "dcheck(e.num)">取消</button>
+											<button class = "btn btn-secondary" @click = "submit(e.num)">確認</button>
 										</center>
 									</div>	
 									
@@ -112,7 +107,7 @@
 		</div>
 		
 		<!-- link for jquery and bootstrap -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 		
@@ -121,6 +116,6 @@
 		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 		
 		<!-- custom js-->
-		<script src="../js/couponList.js"></script>
+		<script src="../js/couponList_js.js"></script>
 	</body>
 </html>
