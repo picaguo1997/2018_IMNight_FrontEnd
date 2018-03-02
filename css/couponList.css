@@ -69,6 +69,24 @@
 			left:250px;
 		}
 	}
+	.moveback{
+		position:relative;
+		top:140px;
+		left:-20px;
+		animation:moveBack 1.2s;
+	}
+	
+	@keyframes moveBack{
+		0%{
+			position:relative;
+			top:100px;
+			left:250px;
+		}100%{
+			position:relative;
+			top:140px;
+			left:-20px;
+		}
+	}
 	
 }
 
@@ -128,6 +146,25 @@
 			position:relative;
 			top:100px;
 			left:250px;
+		}
+	}
+	
+	.moveback{
+		position:relative;
+		top:140px;
+		left:-10px;
+		animation:moveBack 1.2s;
+	}
+	
+	@keyframes moveBack{
+		0%{
+			position:relative;
+			top:100px;
+			left:250px;
+		}100%{
+			position:relative;
+			top:140px;
+			left:-10px;
 		}
 	}
 }
@@ -197,20 +234,35 @@
 .description{
 	z-index:3;
 	padding:5px;
-	background-color: rgba(220,181,255,0.9);
+	background-color: rgba(221,160,221,0.9);
 	position:relative;
 	top:50px;
+}
+
+.description h3{
+	color:white;
 }
 
 .star{
 	cursor:pointer;
 	-webkit-clip-path: circle(50% at 50% 50%);
 	clip-path: circle(50% at 50% 50%);
-	background-color:yellow;
+	background-color:rgba(127,255,121,0.9);
 	opacity:0.8;
 	height:80px;
 	width:80px;
 	z-index:2;
+	transition:position 1.2s;
+}
+
+.rainbow{
+	animation:animate_bg 3s linear infinite;	
+}
+
+@keyframes animate_bg {
+    0%   {background:rgba(255,255,0,0.9);}
+    50%  {background:rgba(187,255,255,1);}
+    100% {background:rgba(255,255,0,0.9);}
 }
 
 .star:hover{
