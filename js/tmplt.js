@@ -5,7 +5,7 @@ function loadPage(page,callback){
 	script_name = "../js/"+page+".js";
 	css_name = "../css/"+page+".css";
 
-	if( ! (script_name == prev_js && css_name == prev_css) /*|| prev_js == "../js/menuPage.js"*/ ){
+	if( ! (script_name == prev_js && css_name == prev_css) || prev_js == "../js/menuPage.js" ){
 		// console.log(prev_js)
 		
 		//remove previous page's html & js & css
@@ -60,7 +60,15 @@ $(".nav-link-collapse").click( function(){
 } );
 
 $(document).ready(function(){
-		// loadPage('remindPage');
-		loadPage('menuPage');
-	}
-);
+	$('.lazy').Lazy({
+		effect: 'fadeIn',
+		effectTime: 2000,
+		threshold: 0,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+	});
+
+	// loadPage('remindPage');
+	loadPage('menuPage');
+});

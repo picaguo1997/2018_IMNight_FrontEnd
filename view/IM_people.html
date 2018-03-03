@@ -24,7 +24,7 @@
 			<div class="row" id="IM_people">
 				<template v-for="person in people">
 					<div class="col-lg-3 col-sm-6 text-center mb-4 person" data-toggle="modal" data-target="#{{$index}}-Modal">
-						<img src="{{ person.img }}" class="rounded-circle img-fluid d-block mx-auto">
+						<img data-src="{{ person.img }}" class="rounded-circle img-fluid d-block mx-auton lazy">
 						<h3>{{ person.title }} {{ person.name }}</h3>
 					</div>
 					<!-- Modal -->
@@ -50,7 +50,7 @@
 											<br>
 										</div>
 										<div class="col-lg-8 modal-img">
-											<img src="{{ person.img }}" class="rounded" style="height:100%;width:100%">
+											<img data-src="{{ person.img }}" class="rounded lazy" style="height:100%;width:100%">
 										</div>
 									</div>
 					      		</div>

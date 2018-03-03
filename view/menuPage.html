@@ -49,10 +49,10 @@
         </div>
       </div>
 
-      <div class="row justify-content-center my-4 no-marg" style="background-color: transparent;">
-        <div class="col-6 col-md-3"><img src="../img/people.png" alt="人緣" class="img-fluid enlarge floating" onclick="link('IM_people')"></div>
-        <div class="col-6 col-md-3"><img src="../img/sky.png" alt="天緣" class="img-fluid enlarge floating" onclick="link('storyhouse')"></div>
-        <div class="col-6 col-md-3"><img src="../img/land.png" alt="地緣" class="img-fluid enlarge floating" onclick="link('couponList')"></div>
+      <div class="row justify-content-center my-4 no-marg">
+        <div class="col-6 col-md-3"><img data-src="../img/people.png" class="lazy img-fluid floating" onclick="link('IM_people')"></div>
+        <div class="col-6 col-md-3"><img data-src="../img/sky.png" class="lazy img-fluid floating" onclick="link('storyhouse')"></div>
+        <div class="col-6 col-md-3"><img data-src="../img/land.png" class="lazy img-fluid floating" onclick="link('couponList')"></div>
       </div>
 
       <!-- for log in modal -->
@@ -79,7 +79,7 @@
       </div>
 
       <!-- for remind modal -->
-      <div class="modal fade" id="remindModal" tabindex="-1" role="dialog" aria-labelledby="remindModalLabel" aria-hidden="false" v-if="loggedIn">
+      <!-- <div class="modal fade" id="remindModal" tabindex="-1" role="dialog" aria-labelledby="remindModalLabel" aria-hidden="false" v-if="loggedIn">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
 
@@ -116,7 +116,7 @@
 
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Card Modal -->
       <div class="modal fade" id="card-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

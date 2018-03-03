@@ -25,19 +25,20 @@
 					<div class = "space" v-for = "e in classes" >
 						<!--front-->
 						<div class = "card" v-bind="{id: 'card'+e.num}" v-on:click = "move(e.num)">
-							<div class = "cit hvr-curl-top-right" :style="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }">
+							<!-- <div class = "lazy cit hvr-curl-top-right" :data-src="{ 'background-image' : 'url(\'' + e.imgUrl + '\')' }"> -->
+							<div class = "lazy cit hvr-curl-top-right" :data-src="e.imgUrl">
 							</div>
 						</div>
 						<div class = "cb" :id = "'cb'+e.num">
 							<h4 class="card-title"><b>{{e.name}}</b></h4>
-							<h6 class="card-subtitle mb-2"><span><img src = "../img/manager.png"></span>{{e.teacher}}</h6>
+							<h6 class="card-subtitle mb-2"><span><img class="lazy" data-src = "../img/manager.png"></span>{{e.teacher}}</h6>
 						</div>
 						
 						
 						<!--back-->
 						<div class = "box transform" v-bind="{id: 'back'+e.num}">
 							<h5>{{e.more}}
-								<span><img class = "moreBtn" data-toggle="modal" :data-target="'#exampleModal'+e.num" src = "../img/play-button.png"></span>
+								<span><img class = "lazy moreBtn" data-toggle="modal" :data-target="'#exampleModal'+e.num" data-src = "../img/play-button.png"></span>
 							</h5>
 						</div>
 					</div>
@@ -55,11 +56,11 @@
 							</div>
 							<center>
 								<div class="modal-body">
-									<img :src="e.imgUrl" class = "logo">
+									<img :data-src="e.imgUrl" class = "lazy logo">
 									<p class = "textBreak">{{e.Info}}</p>
-									<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" v-on:click= "crack(e.num)">
-									<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
-									<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
+									<img v-bind = "{id: 'egg'+e.num}" class = "lazy egg" data-src = "../img/egg.png" v-on:click= "crack(e.num)">
+									<img v-bind = "{id: 'eggDown'+e.num}" class = "lazy eggdown hide" data-src = "../img/egg_down.png">
+									<img v-bind = "{id: 'eggUp'+e.num}" class = "lazy eggup hide" data-src = "../img/egg_up.png">
 								</div>
 							</center>
 						</div>

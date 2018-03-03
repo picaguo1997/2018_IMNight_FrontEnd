@@ -10,7 +10,7 @@
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 	</head>
-	
+
 	<body>
 		<div id = "mainContext">
 			<div class="row">
@@ -25,7 +25,7 @@
 					<div class="list-group" id="list-tab" role="tablist">
 						<a v-for = "e in shops" @click ="changeCss(e.num)" class="list-group-item hvr-sweep-to-right" :id = "'list-'+e.num" data-toggle = "list" :href="'#right'+e.num" role = "tab" :aria-controls="e.num">
 							<div class = "leftImg" >
-								<img class="img-circle" :src = "e.logo" :id = "'Img-'+e.num">
+								<img class="img-circle lazy" :data-src = "e.logo" :id = "'Img-'+e.num">
 							</div>
 							<div class = "description" :id = "'Des-'+e.num">
 								<h3 :id = "'DesNa-'+e.num" class = "DesNa">{{e.name}}</h3>
@@ -43,7 +43,7 @@
 								<h6>{{e.detail}}</h6>
 							</div>
 							<div class = "leftImg" >
-								<img class="img-circle" :src = "e.logo" :id = "'img-'+e.num" v-on:click = "swap(e.num)">
+								<img class="img-circle lazy" :data-src = "e.logo" :id = "'img-'+e.num" v-on:click = "swap(e.num)">
 							</div>
 						</a>
 					</div>
@@ -54,7 +54,7 @@
 						<div v-for = "e in shops" class = "tab-pane fade context" :id = "'right'+e.num" role="tabpanel" :aria-labelledby="'list-'+e.num">
 							<center>
 								<p v-html = "e.info" class = "word"></p>
-								<a :href = "e.fbPage" target="_blank" ><img :src = "e.logo" class = "rightImg"></a>
+								<a :href = "e.fbPage" target="_blank" ><img :data-src = "e.logo" class = "rightImg lazy"></a>
 							</center>
 						</div>
 					</div>

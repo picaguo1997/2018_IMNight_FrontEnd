@@ -18,7 +18,7 @@
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
 }
 
-.content-wrapper:before{
+/* .content-wrapper:before{
 	content:"";
     position: absolute;
     width: 100%;
@@ -32,6 +32,22 @@
 	background-size: contain;
 	z-index: -1;
 	animation: bgFadeIn 1.0s;
+} */
+
+#content-background{
+	content:"";
+    position: absolute;
+    width: 100%;
+    height:100%;
+  	opacity:0.3;
+	top:0px;
+	/* background-image:url('../img/KV_OP.jpg'); */
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-attachment: fixed;
+	background-size: contain;
+	z-index: -1;
+	/* animation: bgFadeIn 1.0s; */
 }
 
 .main-content{

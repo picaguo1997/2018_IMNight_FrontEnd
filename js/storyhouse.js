@@ -56,3 +56,14 @@ var resource = new Vue({
 		}
 	}
 })
+
+$(function(){
+	$('.lazy').Lazy({
+		effect: 'fadeIn',
+		effectTime: 1000,
+		threshold: 0,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+	});	
+})

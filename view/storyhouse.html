@@ -27,8 +27,9 @@
 			<div class = "story">
 				<div class = "row">
 					<div class = "cardInRow" v-for = "e in stories" >
-						<div class = "card box-shadow" data-toggle="modal" :data-target="'#modal'+e.num" :style="{ backgroundImage: 'url(' + e.imgUrl + ')' }">
-							<img class="card-img" :src = "e.imgUrl" alt="Card image">
+						<!-- <div class = "card box-shadow" data-toggle="modal" :data-target="'#modal'+e.num" :style="{ backgroundImage: 'url(' + e.imgUrl + ')' }"> -->
+						<div class = "card box-shadow lazy" data-toggle="modal" :data-target="'#modal'+e.num" :data-src="e.imgUrl">
+							<img class="card-img lazy" :data-src = "e.imgUrl" alt="Card image">
 						</div>
 						
 						<div class = "triangle">
@@ -54,9 +55,9 @@
 								<div class="modal-body">
 									<p v-html = "e.info"></p>
 									<center v-on:click= "crack(e.num)">
-										<img v-bind = "{id: 'egg'+e.num}" class = "egg" src = "../img/egg.png" >
-										<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide" src = "../img/egg_down.png">
-										<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide" src = "../img/egg_up.png">
+										<img v-bind = "{id: 'egg'+e.num}" class = "egg lazy" data-src = "../img/egg.png" >
+										<img v-bind = "{id: 'eggDown'+e.num}" class = "eggdown hide lazy" data-src = "../img/egg_down.png">
+										<img v-bind = "{id: 'eggUp'+e.num}" class = "eggup hide lazy" data-src = "../img/egg_up.png">
 									</center>
 								</div>
 							</div>
