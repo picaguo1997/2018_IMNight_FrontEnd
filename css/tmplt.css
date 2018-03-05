@@ -170,7 +170,7 @@ nav{
 }
 @media (min-width:992px){
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav{
-		/*background:#ffffff*/
+		background:#ffffff;
 		margin-top:10px;
 	}
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a{
