@@ -7,6 +7,11 @@
 
 #nav-btn:hover {
 	cursor: pointer;
+	color: #4e274a; /*左上滑過顏色*/
+}
+
+##nav-btn{
+	color: #rgb(204, 117, 117); /*左上顏色*/
 }
 
 /* end */
@@ -64,6 +69,7 @@ nav{
 
 #mainNav{
 	/* font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important; */
+	background-color: rgba(255, 255, 255, 0.5) /*顏色*/
 }
 
 #mainNav .navbar-collapse{
