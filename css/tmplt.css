@@ -75,6 +75,7 @@ nav{
 
 #mainNav{
 	/* font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important; */
+	opacity: 0.3;
 }
 
 #mainNav .navbar-collapse{
@@ -175,8 +176,8 @@ nav{
 }
 @media (min-width:992px){
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav{
-		background:#ffffff
-		margin-top:10px;
+		/*background:#ffffff*/
+		margin-top:40px;
 	}
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a{
 		color:#000!important;
