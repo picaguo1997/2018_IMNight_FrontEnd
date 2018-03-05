@@ -144,7 +144,7 @@
 }
 
 .transform-active {
-  background-color: rgb(226, 141, 170,0.9);
+  background-color: rgba(226, 141, 170,0.9);
   height:90px;
   width: 250px;
   z-index:0;
