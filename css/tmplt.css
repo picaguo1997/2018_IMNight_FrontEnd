@@ -3,22 +3,12 @@
 	font-weight: 900;
 	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
 	color: #272727;
-}/* added by timlee0119 on 2018/2/28 */
-.jh {
-	font-weight: 900;
-	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif;
-	color: #272727;
 }
 
 #nav-btn:hover {
 	cursor: pointer;
 	color: #4e274a; /*左上滑過顏色*/
 }
-
-#nav-btn{
-	color: rgb(204, 117, 117); /*左上顏色*/
-}
-
 
 /* end */
 
@@ -75,7 +65,6 @@ nav{
 
 #mainNav{
 	/* font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important; */
-	opacity: 0.3;
 }
 
 #mainNav .navbar-collapse{
@@ -176,210 +165,7 @@ nav{
 }
 @media (min-width:992px){
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav{
-		/*background:#ffffff*/
-		margin-top:40px;
-	}
-	#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a{
-		color:#000!important;
-		background-color:#e9ecef
-	}
-	#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a:focus,#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a:hover{
-		color:#000
-	}
-	
-}
-
-@keyframes bgFadeIn{
-	from{
-		opacity: 0.0;
-	}
-	to{
-		opacity: 0.3;
-	}
-}
-
-@keyframes slidein-left {
-  from {
-    opacity: 0;
-  }
-  15% {
-    opacity: 0;
-  }
-  20% {
-    left: -20px;
-  }
-  to {
-    left: 0;
-  }
-}
-
-
-#nav-btn:hover {
-	cursor: pointer;
-	color: #4e274a; /*左上滑過顏色*/
-}
-
-#nav-btn{
-	color: rgb(204, 117, 117); /*左上顏色*/
-}
-
-/* end */
-
-.content-wrapper{
-	min-height:calc(100vh - 56px);
-	padding-top:5rem;
-	position:relative;
-	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
-}
-
-/* .content-wrapper:before{
-	content:"";
-    position: absolute;
-    width: 100%;
-    height:100%;
-  	opacity:0.3;
-	top:0px;
-	background-image:url('../img/KV_OP.jpg');
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-attachment: fixed;
-	background-size: contain;
-	z-index: -1;
-	animation: bgFadeIn 1.0s;
-} */
-
-#content-background{
-    margin:0;
-    padding:0;
-	content:"";
-    /*position: absolute;*/
-    width: 100%;
-    height:100%;
-  	opacity:0.3;
-	top:0px;
-	/* background-image:url('../img/KV_OP.jpg'); */
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-attachment: fixed;
-	background-size: contain;
-	z-index: -1;
-	/* animation: bgFadeIn 1.0s; */
-}
-
-.main-content{
-	padding-left: 0px;
-	padding-right: 0px;
-	margin: auto;
-}
-
-nav{
-	animation: slidein-left 2.0s;
-}
-
-#mainNav{
-	/* font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important; */
-	background-color: rgba(255, 255, 255, 0.5); /*顏色*/
-}
-
-#mainNav .navbar-collapse{
-	overflow:auto;
-	max-height:75vh
-}
-#mainNav .navbar-collapse .navbar-nav .nav-item .nav-link{
-	cursor:pointer
-}
-/* #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after{
-	float:right;
-	content:'\f107';
-	font-family: "微軟正黑體", "Microsoft JhengHei","細明體", "MingLiU", "標楷體", "DFKai-sb", serif !important;
-	text-rendering: optimizeLegibility;
-} */
-/* #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after{
-	content:'\f105'
-} */
-#mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level{
-	padding-left:0
-}
-#mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level>li>a{
-	display:block;
-	padding:.5em 0
-}
-#mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level>li>a:focus,#mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level>li>a:hover{
-	text-decoration:none
-}
-#mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level>li>a{
-	padding-left:1em
-}
-
-@media (min-width:992px){
-	#mainNav .navbar-brand{
-		width:250px
-	}
-	#mainNav .navbar-collapse{
-		overflow:visible;
-		max-height:none
-	}
-	#mainNav .navbar-collapse .navbar-sidenav{
-		position:absolute;
-		top:0;
-		left:0;
-		-webkit-flex-direction:column;
-		-ms-flex-direction:column;
-		flex-direction:column;
-		margin-top:56px
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item{
-		width:250px;
-		padding:0
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item>.nav-link{
-		padding:1em
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level{
-		padding-left:0;
-		list-style:none
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li{
-		width:250px
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a{
-		padding:1em
-	}
-	#mainNav .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a{
-		padding-left:2.75em
-	}
-}
-@media (min-width:992px){
-	#mainNav.fixed-top .navbar-sidenav{
-		height:calc(100vh)
-	}
-}
-@media (min-width:992px){
-	.content-wrapper{
-		margin-left:250px
-	}
-}
-#sidenavToggler i{
-	font-weight:800
-}
-#mainNav.navbar-light .navbar-collapse .navbar-sidenav .nav-link-collapse:after{
-	color:rgba(0,0,0,.5)
-}
-#mainNav.navbar-light .navbar-collapse .navbar-sidenav>.nav-item>.nav-link{
-	color:rgba(0,0,0,.5)
-}
-#mainNav.navbar-light .navbar-collapse .navbar-sidenav>.nav-item>.nav-link:hover{
-	color:rgba(0,0,0,.7)
-}
-#mainNav.navbar-light .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a{
-	color:rgba(0,0,0,.5)
-}
-#mainNav.navbar-light .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:focus,#mainNav.navbar-light .navbar-collapse .navbar-sidenav>.nav-item .sidenav-second-level>li>a:hover{
-	color:rgba(0,0,0,.7)
-}
-@media (min-width:992px){
-	#mainNav.navbar-light .navbar-collapse .navbar-sidenav{
-		
+		background:#ffffff
 		margin-top:10px;
 	}
 	#mainNav.navbar-light .navbar-collapse .navbar-sidenav li.active a{
