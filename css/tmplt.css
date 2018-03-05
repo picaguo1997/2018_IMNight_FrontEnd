@@ -74,6 +74,7 @@ nav{
 
 #mainNav .navbar-collapse{
 	overflow:auto;
+	max-height:75vh
 }
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link{
 	cursor:pointer
