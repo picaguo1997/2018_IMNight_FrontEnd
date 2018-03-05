@@ -74,8 +74,6 @@ nav{
 
 #mainNav .navbar-collapse{
 	overflow:auto;
-	max-height:75vh;
-	background-color: rgba(255, 255, 255, 0.5);
 }
 #mainNav .navbar-collapse .navbar-nav .nav-item .nav-link{
 	cursor:pointer
