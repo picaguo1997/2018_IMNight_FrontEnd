@@ -100,7 +100,7 @@
 	clip-path: polygon(100% 0%, 82% 50%, 100% 100%, 0 100%, 0 49%, 0 0);
 	position:relative;
 	top:-90px;
-	background-color: rgba(226, 141, 170, 0.7); /*底色*/
+	background-color: rgba(245, 141, 113, 0.7); /*底色*/
 	width: 130px;
 	padding:5px;
 	text-align:left;
@@ -144,7 +144,7 @@
 }
 
 .transform-active {
-  background-color: rgba(136, 96, 115, 0.9); /*課程名稱底*/
+  background-color: rgba(179, 84, 103, 0.8); /*課程名稱底*/
   height:90px;
   width: 250px;
   z-index:0;
