@@ -234,7 +234,7 @@
 .description{
 	z-index:3;
 	padding:5px;
-	background-color: rgba(221,160,221,0.9);
+	background-color: rgba(228, 163, 95, 0.9); /*底色*/
 	position:relative;
 	top:50px;
 }
